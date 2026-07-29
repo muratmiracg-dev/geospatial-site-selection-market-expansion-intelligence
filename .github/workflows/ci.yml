@@ -21,7 +21,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: "0.8.14"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: uv sync --all-extras --locked
@@ -35,7 +35,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: "0.8.14"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: uv sync --all-extras --locked
@@ -57,7 +57,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: "0.8.14"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: uv sync --all-extras --locked
