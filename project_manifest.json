@@ -2,7 +2,7 @@
   "project": "Geospatial Site Selection & Market Expansion Intelligence",
   "status": "READY_FOR_REVIEW_NOT_PUBLISHED",
   "file_count": 172,
-  "total_bytes": 18970224,
+  "total_bytes": 18970267,
   "hash_ledger_exclusions": [
     ".coverage",
     "Geospatial_Site_Selection_Market_Expansion_Intelligence_READY_FOR_REVIEW.zip",
@@ -48,8 +48,8 @@
     },
     {
       "path": ".github/workflows/security.yml",
-      "bytes": 977,
-      "sha256": "d10feb9340565e91fff660366139d7bcd9dd25ae29675581a17d39134712ed1c"
+      "bytes": 1020,
+      "sha256": "d3956d83a56b2e5ff3a06882a3591dbbdc9b087d5e2ff07eed875daf6ca29d1b"
     },
     {
       "path": ".gitignore",
