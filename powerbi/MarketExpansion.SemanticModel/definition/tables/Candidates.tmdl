@@ -1,0 +1,100 @@
+table Candidates
+	lineageTag: 4a958356-3b7b-4af6-b095-e9c07b4c9b31
+
+	measure 'Top Location Score' = MAX(Candidates[location_score])
+		formatString: 0.0
+
+	measure 'Predicted Sales TRY m' = SUM(Candidates[predicted_sales_try_m])
+		formatString: #,0.0
+
+	measure 'Average Cannibalization Risk' = AVERAGE(Candidates[cannibalization_risk])
+		formatString: 0.0%
+
+	measure 'Accessible Population - Drive 10' = SUM(Candidates[accessible_pop_drive_10])
+		formatString: #,0
+
+	measure 'Opening Cost TRY m' = SUM(Candidates[opening_cost_try_m])
+		formatString: #,0.0
+
+	column candidate_id
+		dataType: string
+		sourceColumn: candidate_id
+
+	column candidate_name
+		dataType: string
+		sourceColumn: candidate_name
+
+	column location_rank
+		dataType: int64
+		formatString: 0
+		sourceColumn: location_rank
+
+	column location_score
+		dataType: double
+		formatString: 0.0
+		sourceColumn: location_score
+
+	column predicted_sales_try_m
+		dataType: double
+		formatString: #,0.0
+		sourceColumn: predicted_sales_try_m
+
+	column accessible_pop_drive_10
+		dataType: int64
+		formatString: #,0
+		sourceColumn: accessible_pop_drive_10
+
+	column accessible_pop_walk_15
+		dataType: int64
+		formatString: #,0
+		sourceColumn: accessible_pop_walk_15
+
+	column competitor_density_3km
+		dataType: int64
+		sourceColumn: competitor_density_3km
+
+	column poi_density_2km
+		dataType: int64
+		sourceColumn: poi_density_2km
+
+	column cannibalization_risk
+		dataType: double
+		formatString: 0.0%
+		sourceColumn: cannibalization_risk
+
+	column opening_cost_try_m
+		dataType: double
+		formatString: #,0.0
+		sourceColumn: opening_cost_try_m
+
+	column roi_3y
+		dataType: double
+		formatString: 0.0%
+		sourceColumn: roi_3y
+
+	column recommendation_tier
+		dataType: string
+		sourceColumn: recommendation_tier
+
+	column latitude
+		dataType: double
+		formatString: 0.000000
+		sourceColumn: latitude
+		summarizeBy: none
+
+	column longitude
+		dataType: double
+		formatString: 0.000000
+		sourceColumn: longitude
+		summarizeBy: none
+
+	partition Candidates = m
+		mode: import
+		source =
+				let
+				    Root = ProjectRoot,
+				    Source = Csv.Document(File.Contents(Root & "/artifacts/data/candidate_scores.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+				in
+				    Headers
+

@@ -1,0 +1,10 @@
+.git
+.venv
+.pytest_cache
+.ruff_cache
+htmlcov
+dist
+build
+*.inspect.ndjson
+Geospatial_Site_Selection_Market_Expansion_Intelligence_READY_FOR_REVIEW.zip
+

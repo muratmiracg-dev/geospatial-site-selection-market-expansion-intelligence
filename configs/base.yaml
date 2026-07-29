@@ -1,0 +1,61 @@
+project:
+  name: Istanbul Geospatial Site Selection & Market Expansion Intelligence
+  seed: 20260729
+  as_of_date: "2026-07-29"
+  synthetic_chain: MarmaraMart
+
+spatial:
+  storage_crs: "EPSG:4326"
+  metric_crs: "EPSG:32635"
+  h3_resolution: 8
+  drive_speed_kph: 38.0
+  walk_speed_kph: 4.8
+  thresholds_minutes: [5, 10, 15]
+  bridge_penalty_minutes: 2.0
+
+model:
+  benchmark_site_count: 320
+  spatial_block_meters: 12000
+  cv_splits: 5
+  random_forest:
+    n_estimators: 450
+    min_samples_leaf: 4
+    max_features: 0.8
+
+scoring:
+  factors:
+    market_potential: 0.23
+    accessibility: 0.15
+    commercial_attraction: 0.11
+    white_space: 0.12
+    cost_efficiency: 0.10
+    cannibalization_resilience: 0.11
+    profitability: 0.13
+    delivery_confidence: 0.05
+  sensitivity_draws: 750
+  weight_concentration: 120
+
+optimization:
+  coverage_threshold_minutes: 10
+  minimum_store_distance_km: 4.5
+  scenarios:
+    optimistic:
+      budget_try_m: 150
+      max_stores: 6
+      demand_multiplier: 1.15
+      cost_multiplier: 0.95
+    base:
+      budget_try_m: 110
+      max_stores: 5
+      demand_multiplier: 1.00
+      cost_multiplier: 1.00
+    pessimistic:
+      budget_try_m: 75
+      max_stores: 4
+      demand_multiplier: 0.85
+      cost_multiplier: 1.10
+
+outputs:
+  artifacts_dir: artifacts
+  processed_dir: data/processed
+

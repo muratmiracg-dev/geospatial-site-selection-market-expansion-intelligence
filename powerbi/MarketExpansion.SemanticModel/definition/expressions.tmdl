@@ -1,0 +1,4 @@
+expression ProjectRoot =
+	"REPLACE_WITH_ABSOLUTE_PROJECT_PATH"
+	meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+

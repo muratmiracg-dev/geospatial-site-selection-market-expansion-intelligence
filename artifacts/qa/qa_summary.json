@@ -1,0 +1,58 @@
+{
+  "overall_status": "PASS_WITH_DOCUMENTED_EXTERNAL_GATES",
+  "lint_and_format": {
+    "ruff_format": "PASS",
+    "ruff_check": "PASS"
+  },
+  "tests": {
+    "status": "PASS",
+    "tests": 13,
+    "failures": 0,
+    "branch_coverage_percent": 96.44,
+    "threshold_percent": 90.0,
+    "junit": "artifacts/qa/junit.xml",
+    "coverage_json": "artifacts/qa/coverage.json",
+    "coverage_xml": "artifacts/qa/coverage.xml"
+  },
+  "data_quality": {
+    "checks": 46,
+    "passed": 44,
+    "warnings": 2,
+    "failed": 0,
+    "critical_failures": 0,
+    "warning_disposition": "Seven synthetic competitors and sixteen synthetic POIs are outside the analytical footprint; retained as non-critical coverage tests."
+  },
+  "artifact_verification": {
+    "status": "PASS",
+    "checks": 39,
+    "failures": 0
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "method": "The integration test reran the full pipeline in a temporary directory and asserted exact candidate-score equivalence to the checked-in output."
+  },
+  "security": {
+    "pip_check": "PASS",
+    "pip_audit": "PASS",
+    "audited_locked_dependencies": 87,
+    "known_vulnerabilities": 0,
+    "credential_pattern_scan": "PASS",
+    "codeql": "CONFIGURED_NOT_EXECUTED_LOCALLY",
+    "trivy": "CONFIGURED_NOT_EXECUTED_LOCALLY"
+  },
+  "document_and_visual_qa": {
+    "excel_formula_error_matches": 0,
+    "excel_sheets_inspected": 9,
+    "powerpoint_slides_inspected": 18,
+    "powerpoint_overflow_test": "PASS",
+    "pdf_pages_inspected": 27,
+    "interactive_maps_inspected": 4,
+    "power_bi_desktop_render": "EXTERNAL_ACCEPTANCE_GATE"
+  },
+  "environment_limits": {
+    "docker_compose_runtime": "NOT_EXECUTED_TOOL_UNAVAILABLE",
+    "postgis_runtime": "NOT_EXECUTED_TOOL_UNAVAILABLE",
+    "kubernetes_runtime": "NOT_EXECUTED_TOOL_UNAVAILABLE",
+    "github_actions": "CONFIGURED_NOT_EXECUTED_BEFORE_PUBLICATION"
+  }
+}

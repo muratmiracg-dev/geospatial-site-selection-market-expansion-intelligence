@@ -1,0 +1,41 @@
+table ScenarioSelection
+	lineageTag: 2b567889-50c0-44ed-8229-6ef2be0241c6
+
+	column scenario
+		dataType: string
+		sourceColumn: scenario
+
+	column priority
+		dataType: int64
+		sourceColumn: priority
+
+	column candidate_id
+		dataType: string
+		sourceColumn: candidate_id
+
+	column candidate_name
+		dataType: string
+		sourceColumn: candidate_name
+
+	column location_score
+		dataType: double
+		sourceColumn: location_score
+
+	column scenario_sales_try_m
+		dataType: double
+		sourceColumn: scenario_sales_try_m
+
+	column scenario_opening_cost_try_m
+		dataType: double
+		sourceColumn: scenario_opening_cost_try_m
+
+	partition ScenarioSelection = m
+		mode: import
+		source =
+				let
+				    Root = ProjectRoot,
+				    Source = Csv.Document(File.Contents(Root & "/artifacts/data/scenario_selections.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+				in
+				    Headers
+

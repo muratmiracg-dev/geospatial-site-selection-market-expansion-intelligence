@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "themeCollection": {
+    "customTheme": {
+      "name": "MarmaraMartGeospatial",
+      "reportVersionAtImport": "5.59",
+      "type": "RegisteredResources"
+    }
+  },
+  "layoutOptimization": 0,
+  "annotations": [
+    {
+      "name": "defaultPage",
+      "value": "executive_overview"
+    },
+    {
+      "name": "decisionSupportDisclaimer",
+      "value": "Synthetic decision-support output; human review required."
+    }
+  ]
+}
+

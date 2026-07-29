@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
+  "pageOrder": [
+    "executive_overview",
+    "candidate_ranking",
+    "accessibility_white_space",
+    "scenario_portfolio",
+    "model_governance"
+  ],
+  "activePageName": "executive_overview"
+}
+

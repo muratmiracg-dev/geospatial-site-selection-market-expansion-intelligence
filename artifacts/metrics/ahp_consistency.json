@@ -1,0 +1,6 @@
+{
+  "method": "reciprocal AHP matrix derived from approved factor weights",
+  "consistency_ratio": 5.399260910031156e-16,
+  "threshold": 0.1,
+  "status": "PASS"
+}

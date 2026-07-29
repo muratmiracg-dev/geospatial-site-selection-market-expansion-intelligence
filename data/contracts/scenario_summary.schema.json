@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/contracts/scenario_summary.schema.json",
+  "title": "Scenario summary record",
+  "type": "object",
+  "required": [
+    "scenario",
+    "solver_status",
+    "selected_store_count",
+    "budget_try_m",
+    "budget_used_try_m",
+    "incremental_covered_population",
+    "market_coverage_rate"
+  ],
+  "properties": {
+    "scenario": {
+      "enum": [
+        "optimistic",
+        "base",
+        "pessimistic"
+      ]
+    },
+    "solver_status": {
+      "const": "Optimal"
+    },
+    "selected_store_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "budget_try_m": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "budget_used_try_m": {
+      "type": "number",
+      "minimum": 0
+    },
+    "incremental_covered_population": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "market_coverage_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "additionalProperties": true
+}
+

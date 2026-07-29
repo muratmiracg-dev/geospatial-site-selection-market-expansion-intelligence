@@ -1,0 +1,17 @@
+factor,weight_change,winner_candidate_id,winner_score,top_5_overlap_with_base
+market_potential,-0.2,C24,80.4138320754717,1.0
+market_potential,0.2,C24,81.98573632887188,1.0
+accessibility,-0.2,C24,80.73845257731958,1.0
+accessibility,0.2,C24,81.7044436893204,1.0
+commercial_attraction,-0.2,C18,81.38896462167689,1.0
+commercial_attraction,0.2,C24,81.23899823874756,0.8
+white_space,-0.2,C24,82.83301844262296,0.8
+white_space,0.2,C18,79.88750722656249,1.0
+cost_efficiency,-0.2,C24,81.54961632653061,1.0
+cost_efficiency,0.2,C24,80.93456078431373,0.8
+cannibalization_resilience,-0.2,C24,80.83918527607362,0.8
+cannibalization_resilience,0.2,C24,81.61560939334638,1.0
+profitability,-0.2,C24,81.0075314168378,1.0
+profitability,0.2,C24,81.45276842105264,1.0
+delivery_confidence,-0.2,C24,81.25039696969698,1.0
+delivery_confidence,0.2,C24,81.22176534653465,1.0

@@ -1,0 +1,225 @@
+geospatial-site-selection-market-expansion-intelligence/
+├── .github
+│   ├── workflows
+│   │   ├── ci.yml
+│   │   ├── codeql.yml
+│   │   └── security.yml
+│   ├── CODEOWNERS
+│   ├── dependabot.yml
+│   └── pull_request_template.md
+├── artifacts
+│   ├── data
+│   │   ├── ahp_pairwise_matrix.csv
+│   │   ├── candidate_accessibility.csv
+│   │   ├── candidate_isochrones.geojson
+│   │   ├── candidate_scores.csv
+│   │   ├── existing_store_accessibility.csv
+│   │   ├── factor_specification.csv
+│   │   ├── minimum_distance_conflicts.csv
+│   │   ├── model_fold_metrics.csv
+│   │   ├── model_out_of_fold_predictions.csv
+│   │   ├── one_at_a_time_sensitivity.csv
+│   │   ├── scenario_selections.csv
+│   │   ├── scenario_summaries.csv
+│   │   ├── score_contributions.csv
+│   │   ├── shap_contributions.csv
+│   │   └── weight_sensitivity.csv
+│   ├── figures
+│   │   ├── base_portfolio_map.png
+│   │   ├── candidate_rank_map.png
+│   │   ├── factor_contributions_top5.png
+│   │   ├── model_validation.png
+│   │   ├── network_isochrones.png
+│   │   ├── scenario_comparison.png
+│   │   ├── top_candidates.png
+│   │   └── white_space_opportunity_map.png
+│   ├── maps
+│   │   ├── candidate_portfolio_map.html
+│   │   ├── network_isochrones_map.html
+│   │   ├── scenario_portfolios_map.html
+│   │   └── white_space_h3_map.html
+│   ├── metrics
+│   │   ├── ahp_consistency.json
+│   │   ├── model_metrics.json
+│   │   └── pipeline_summary.json
+│   ├── models
+│   │   └── demand_model.joblib
+│   └── qa
+│       ├── artifact_verification.json
+│       ├── audited_requirements.txt
+│       ├── coverage.json
+│       ├── coverage.xml
+│       ├── data_quality_checks.csv
+│       ├── data_quality_summary.json
+│       ├── excel_formula_scan.ndjson
+│       ├── junit.xml
+│       ├── pip_audit.json
+│       ├── qa_summary.json
+│       ├── secret_scan.json
+│       └── visual_qa_summary.json
+├── configs
+│   └── base.yaml
+├── data
+│   ├── contracts
+│   │   ├── candidate_scores.schema.json
+│   │   └── scenario_summary.schema.json
+│   ├── processed
+│   │   ├── benchmark_site_performance.csv
+│   │   ├── candidate_locations.geojson
+│   │   ├── competitors.geojson
+│   │   ├── existing_stores.geojson
+│   │   ├── h3_microzones.geojson
+│   │   ├── istanbul_analytical_footprint.geojson
+│   │   └── pois.geojson
+│   └── README.md
+├── docker
+│   ├── grafana
+│   │   ├── dashboards
+│   │   │   └── site-intelligence-api.json
+│   │   └── provisioning
+│   │       ├── dashboards
+│   │       │   └── dashboards.yml
+│   │       └── datasources
+│   │           └── prometheus.yml
+│   └── prometheus
+│       └── prometheus.yml
+├── docs
+│   ├── adr
+│   │   ├── 0001-synthetic-commercial-data.md
+│   │   ├── 0002-crs-and-h3.md
+│   │   ├── 0003-spatial-validation.md
+│   │   └── 0004-ahp-plus-coverage-optimization.md
+│   ├── portfolio
+│   │   ├── cv_bullets_en.md
+│   │   ├── cv_bullets_tr.md
+│   │   ├── github_metadata.md
+│   │   ├── interview_narrative.md
+│   │   ├── linkedin_description_en.md
+│   │   ├── linkedin_description_tr.md
+│   │   ├── linkedin_post_en.md
+│   │   └── linkedin_post_tr.md
+│   ├── api_reference.md
+│   ├── architecture.md
+│   ├── branch_protection_guide.md
+│   ├── data_contract.md
+│   ├── data_dictionary.md
+│   ├── data_source_license_crosswalk.md
+│   ├── deployment.md
+│   ├── governance.md
+│   ├── incident_response.md
+│   ├── limitations.md
+│   ├── methodology.md
+│   ├── model_card.md
+│   ├── monitoring_runbook.md
+│   ├── review_handoff.md
+│   ├── risk_register.md
+│   ├── threat_model.md
+│   └── validation_and_bias.md
+├── excel
+│   └── Istanbul_Location_Evaluation_Scenario_Workbook.xlsx
+├── k8s
+│   ├── api.yaml
+│   └── resilience.yaml
+├── powerbi
+│   ├── assets
+│   │   └── dashboard_mockup.png
+│   ├── MarketExpansion.Report
+│   │   ├── definition
+│   │   │   ├── pages
+│   │   │   │   ├── accessibility_white_space
+│   │   │   │   │   └── page.json
+│   │   │   │   ├── candidate_ranking
+│   │   │   │   │   └── page.json
+│   │   │   │   ├── executive_overview
+│   │   │   │   │   └── page.json
+│   │   │   │   ├── model_governance
+│   │   │   │   │   └── page.json
+│   │   │   │   ├── scenario_portfolio
+│   │   │   │   │   └── page.json
+│   │   │   │   └── pages.json
+│   │   │   ├── report.json
+│   │   │   └── version.json
+│   │   ├── StaticResources
+│   │   │   └── RegisteredResources
+│   │   │       └── MarmaraMartGeospatial.json
+│   │   └── definition.pbir
+│   ├── MarketExpansion.SemanticModel
+│   │   ├── definition
+│   │   │   ├── tables
+│   │   │   │   ├── Candidates.tmdl
+│   │   │   │   ├── ScenarioSelection.tmdl
+│   │   │   │   ├── ScenarioSummary.tmdl
+│   │   │   │   └── ScoreContributions.tmdl
+│   │   │   ├── database.tmdl
+│   │   │   ├── expressions.tmdl
+│   │   │   ├── model.tmdl
+│   │   │   └── relationships.tmdl
+│   │   └── definition.pbism
+│   ├── dashboard_blueprint.md
+│   ├── MarketExpansion.pbip
+│   └── README.md
+├── presentation
+│   └── Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx
+├── report
+│   └── Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf
+├── scripts
+│   ├── artifacts
+│   │   ├── build_excel.mjs
+│   │   ├── build_presentation.mjs
+│   │   └── README.md
+│   ├── build_methodology_report.py
+│   ├── generate_manifest.py
+│   ├── load_postgis.py
+│   └── verify_artifacts.py
+├── sql
+│   ├── schema.sql
+│   ├── validation.sql
+│   └── views.sql
+├── src
+│   └── site_intelligence
+│       ├── api
+│       │   ├── __init__.py
+│       │   ├── app.py
+│       │   └── schemas.py
+│       ├── __init__.py
+│       ├── accessibility.py
+│       ├── catalog.py
+│       ├── cli.py
+│       ├── config.py
+│       ├── constants.py
+│       ├── data_generation.py
+│       ├── enrichment.py
+│       ├── figures.py
+│       ├── geo.py
+│       ├── gravity.py
+│       ├── maps.py
+│       ├── modeling.py
+│       ├── optimization.py
+│       ├── pipeline.py
+│       ├── quality.py
+│       └── scoring.py
+├── tests
+│   ├── conftest.py
+│   ├── test_api.py
+│   ├── test_geo_and_quality.py
+│   ├── test_pipeline_outputs.py
+│   └── test_scoring.py
+├── .dockerignore
+├── .env.example
+├── .gitignore
+├── CITATION.cff
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── docker-compose.yml
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── MANIFEST.sha256
+├── project_manifest.json
+├── pyproject.toml
+├── README.md
+├── README_TR.md
+├── RELEASE_NOTES.md
+├── repository_tree.txt
+├── SECURITY.md
+└── uv.lock

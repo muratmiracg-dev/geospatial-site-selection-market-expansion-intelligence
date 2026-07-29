@@ -1,0 +1,41 @@
+{
+  "run_status": "SUCCESS",
+  "seed": 20260729,
+  "as_of_date": "2026-07-29",
+  "runtime_seconds": 9.753,
+  "h3_cells": 5965,
+  "candidate_count": 24,
+  "existing_store_count": 10,
+  "competitor_count": 96,
+  "poi_count": 720,
+  "transport_graph_nodes": 5965,
+  "transport_graph_edges": 17431,
+  "top_candidate_id": "C24",
+  "top_candidate_name": "Ikitelli Industry",
+  "top_candidate_score": 81.236,
+  "top_candidate_predicted_sales_try_m": 183.107,
+  "base_selected_store_count": 4,
+  "base_budget_used_try_m": 93.382,
+  "base_incremental_covered_population": 1329291,
+  "base_market_coverage_rate": 0.23124638257544514,
+  "model_metrics": {
+    "validation_strategy": "5-fold GroupKFold on 12 km projected spatial blocks",
+    "rows": 320,
+    "spatial_blocks": 33,
+    "mae_try_m": 3.8185413647551996,
+    "rmse_try_m": 5.732219797686476,
+    "r2": 0.9643286739884733,
+    "mape": 0.02648478148301958,
+    "target_mean_try_m": 162.84398124999998,
+    "target_std_try_m": 30.397849154128313
+  },
+  "quality": {
+    "checks": 46,
+    "passed": 44,
+    "warnings": 2,
+    "failed": 0,
+    "critical_failures": 0
+  },
+  "ahp_consistency_ratio": 5.399260910031156e-16,
+  "disclaimer": "Synthetic decision-support output; not investment advice."
+}

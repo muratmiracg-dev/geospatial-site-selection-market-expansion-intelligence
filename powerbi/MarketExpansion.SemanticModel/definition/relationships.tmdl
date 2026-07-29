@@ -1,0 +1,10 @@
+relationship ScenarioSelection_Candidates
+	fromColumn: ScenarioSelection.candidate_id
+	toColumn: Candidates.candidate_id
+	crossFilteringBehavior: oneDirection
+
+relationship ScoreContributions_Candidates
+	fromColumn: ScoreContributions.candidate_id
+	toColumn: Candidates.candidate_id
+	crossFilteringBehavior: oneDirection
+

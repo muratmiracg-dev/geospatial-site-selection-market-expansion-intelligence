@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "checks": 39,
+  "passes": 39,
+  "failures": 0,
+  "results": [
+    {
+      "check": "exists:artifacts/metrics/pipeline_summary.json",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/metrics/pipeline_summary.json"
+    },
+    {
+      "check": "exists:artifacts/data/candidate_scores.csv",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/candidate_scores.csv"
+    },
+    {
+      "check": "exists:artifacts/data/scenario_summaries.csv",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/scenario_summaries.csv"
+    },
+    {
+      "check": "exists:artifacts/data/scenario_selections.csv",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/scenario_selections.csv"
+    },
+    {
+      "check": "exists:artifacts/data/factor_specification.csv",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/factor_specification.csv"
+    },
+    {
+      "check": "exists:artifacts/qa/data_quality_summary.json",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/qa/data_quality_summary.json"
+    },
+    {
+      "check": "exists:artifacts/maps/candidate_portfolio_map.html",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/candidate_portfolio_map.html"
+    },
+    {
+      "check": "exists:artifacts/maps/white_space_h3_map.html",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/white_space_h3_map.html"
+    },
+    {
+      "check": "exists:artifacts/maps/network_isochrones_map.html",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/network_isochrones_map.html"
+    },
+    {
+      "check": "exists:artifacts/maps/scenario_portfolios_map.html",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/scenario_portfolios_map.html"
+    },
+    {
+      "check": "exists:excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx"
+    },
+    {
+      "check": "exists:presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx"
+    },
+    {
+      "check": "exists:report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf"
+    },
+    {
+      "check": "exists:powerbi/MarketExpansion.pbip",
+      "status": "PASS",
+      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/powerbi/MarketExpansion.pbip"
+    },
+    {
+      "check": "pipeline_status",
+      "status": "PASS",
+      "details": "SUCCESS"
+    },
+    {
+      "check": "candidate_count",
+      "status": "PASS",
+      "details": "24"
+    },
+    {
+      "check": "candidate_ids_unique",
+      "status": "PASS",
+      "details": "candidate_id"
+    },
+    {
+      "check": "ranks_unique",
+      "status": "PASS",
+      "details": "location_rank"
+    },
+    {
+      "check": "score_bounds",
+      "status": "PASS",
+      "details": "0 <= location_score <= 100"
+    },
+    {
+      "check": "ahp_weights_sum",
+      "status": "PASS",
+      "details": "1.000000000000"
+    },
+    {
+      "check": "scenario_solver_status",
+      "status": "PASS",
+      "details": "Optimal,Optimal,Optimal"
+    },
+    {
+      "check": "scenario_budget_feasibility",
+      "status": "PASS",
+      "details": "budget_used <= budget"
+    },
+    {
+      "check": "scenario_selection_counts",
+      "status": "PASS",
+      "details": "{'base': 4, 'optimistic': 6, 'pessimistic': 3}"
+    },
+    {
+      "check": "data_quality_failures",
+      "status": "PASS",
+      "details": "0"
+    },
+    {
+      "check": "office_container:excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx",
+      "status": "PASS",
+      "details": "valid Open XML ZIP"
+    },
+    {
+      "check": "office_container:presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx",
+      "status": "PASS",
+      "details": "valid Open XML ZIP"
+    },
+    {
+      "check": "pdf_structure",
+      "status": "PASS",
+      "details": "27 pages; encrypted=False"
+    },
+    {
+      "check": "interactive_map:artifacts/maps/candidate_portfolio_map.html",
+      "status": "PASS",
+      "details": "HTML and OSM attribution present"
+    },
+    {
+      "check": "interactive_map:artifacts/maps/white_space_h3_map.html",
+      "status": "PASS",
+      "details": "HTML and OSM attribution present"
+    },
+    {
+      "check": "interactive_map:artifacts/maps/network_isochrones_map.html",
+      "status": "PASS",
+      "details": "HTML and OSM attribution present"
+    },
+    {
+      "check": "interactive_map:artifacts/maps/scenario_portfolios_map.html",
+      "status": "PASS",
+      "details": "HTML and OSM attribution present"
+    },
+    {
+      "check": "powerbi_json",
+      "status": "PASS",
+      "details": "9 JSON files"
+    },
+    {
+      "check": "repository_json",
+      "status": "PASS",
+      "details": "23 JSON/GeoJSON files"
+    },
+    {
+      "check": "markdown_local_links",
+      "status": "PASS",
+      "details": "17 local links"
+    },
+    {
+      "check": "yaml:docker-compose.yml",
+      "status": "PASS",
+      "details": "valid YAML"
+    },
+    {
+      "check": "yaml:.github/workflows/ci.yml",
+      "status": "PASS",
+      "details": "valid YAML"
+    },
+    {
+      "check": "yaml:.github/workflows/codeql.yml",
+      "status": "PASS",
+      "details": "valid YAML"
+    },
+    {
+      "check": "yaml:.github/workflows/security.yml",
+      "status": "PASS",
+      "details": "valid YAML"
+    },
+    {
+      "check": "yaml:.github/dependabot.yml",
+      "status": "PASS",
+      "details": "valid YAML"
+    }
+  ]
+}

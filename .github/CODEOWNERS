@@ -1,0 +1,10 @@
+* @muratmiracg-dev
+/src/site_intelligence/modeling.py @muratmiracg-dev
+/src/site_intelligence/scoring.py @muratmiracg-dev
+/src/site_intelligence/optimization.py @muratmiracg-dev
+/data/contracts/ @muratmiracg-dev
+/sql/ @muratmiracg-dev
+/.github/ @muratmiracg-dev
+/docs/governance.md @muratmiracg-dev
+/docs/model_card.md @muratmiracg-dev
+

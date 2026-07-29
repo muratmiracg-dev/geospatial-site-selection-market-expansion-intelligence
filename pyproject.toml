@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "istanbul-site-intelligence"
+version = "1.0.0"
+description = "Auditable geospatial site selection and market expansion decision-support platform."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Murat Miraç Gedik" }]
+keywords = ["geospatial", "site-selection", "market-expansion", "location-allocation", "h3"]
+dependencies = [
+  "fastapi==0.141.0",
+  "folium==0.20.0",
+  "geoalchemy2==0.18.0",
+  "geopandas==1.1.4",
+  "h3==4.3.1",
+  "httpx==0.28.1",
+  "joblib==1.5.1",
+  "matplotlib==3.10.8",
+  "networkx==3.5",
+  "numpy==2.3.5",
+  "pandas==2.2.3",
+  "plotly==6.3.0",
+  "prometheus-client==0.22.1",
+  "psycopg==3.2.9",
+  "pulp==3.2.2",
+  "pydantic==2.13.4",
+  "pyproj==3.7.2",
+  "pyyaml==6.0.2",
+  "scikit-learn==1.8.0",
+  "seaborn==0.13.2",
+  "scipy==1.17.0",
+  "shap==0.52.0",
+  "shapely==2.1.1",
+  "sqlalchemy==2.0.43",
+  "uvicorn==0.35.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "coverage==7.15.2",
+  "pip-audit==2.9.0",
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "ruff==0.12.10",
+]
+artifacts = [
+  "pillow==12.3.0",
+  "pypdf==6.14.2",
+  "python-pptx==1.0.2",
+  "reportlab==4.4.9",
+]
+
+[project.scripts]
+site-intelligence = "site_intelligence.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/site_intelligence"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = ["powerbi"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM", "C4", "RUF"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "integration: end-to-end or filesystem-heavy tests",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["site_intelligence"]
+omit = [
+  "src/site_intelligence/cli.py",
+  "src/site_intelligence/api/app.py",
+]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = true

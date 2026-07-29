@@ -1,0 +1,14 @@
+scenario,priority,candidate_id,candidate_name,location_rank,location_score,scenario_sales_try_m,scenario_opening_cost_try_m,cannibalization_risk
+optimistic,1,C24,Ikitelli Industry,1,81.236,210.57305,22.268,0.010471
+optimistic,2,C18,Sultanbeyli Square,2,80.521,209.66799999999998,21.181199999999997,0.018037
+optimistic,3,C17,Sancaktepe Hub,3,80.095,209.51044999999996,23.047949999999997,0.02556
+optimistic,4,C07,Eyupsultan Hub,4,78.88,212.68559999999997,22.21575,0.348754
+optimistic,5,C03,Avcilar University,5,78.402,209.72549999999998,24.377,0.01029
+optimistic,6,C15,Pendik Marina,8,74.183,204.1871,22.69265,0.023205
+base,1,C24,Ikitelli Industry,1,81.236,183.107,23.44,0.010471
+base,2,C18,Sultanbeyli Square,2,80.521,182.32,22.296,0.018037
+base,3,C17,Sancaktepe Hub,3,80.095,182.183,24.261,0.02556
+base,4,C07,Eyupsultan Hub,4,78.88,184.944,23.385,0.348754
+pessimistic,1,C24,Ikitelli Industry,1,81.236,155.64095,25.784000000000002,0.010471
+pessimistic,2,C18,Sultanbeyli Square,2,80.521,154.97199999999998,24.5256,0.018037
+pessimistic,3,C05,Kagithane Axis,6,77.712,155.93759999999997,24.163700000000002,0.609962

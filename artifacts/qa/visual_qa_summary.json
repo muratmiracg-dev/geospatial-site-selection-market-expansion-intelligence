@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "excel": {
+    "workbook": "excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx",
+    "sheets_rendered_and_inspected": 9,
+    "formula_error_matches": 0,
+    "notes": "Dashboard, evaluation, planner, weights, candidates, scenarios, accessibility, SHAP and source/license sheets inspected."
+  },
+  "powerpoint": {
+    "deck": "presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx",
+    "slides_rendered_and_inspected": 18,
+    "overflow_test": "PASS",
+    "notes": "All slides rendered; title wrapping and percent-label issues corrected before final test."
+  },
+  "pdf": {
+    "report": "report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf",
+    "pages_rendered_and_inspected": 27,
+    "structural_check": "PASS",
+    "notes": "All pages rendered to PNG; contact sheet and detail pages inspected."
+  },
+  "interactive_maps": {
+    "files_inspected": 4,
+    "status": "PASS",
+    "notes": "HTML structure, analytical layers and OpenStreetMap attribution were verified; corresponding static candidate, white-space, isochrone and scenario renders were visually inspected."
+  },
+  "power_bi": {
+    "status": "STARTER_VALIDATED",
+    "notes": "PBIP/PBIR/TMDL source structure and JSON validated. Power BI Desktop rendering remains an explicit external acceptance gate."
+  }
+}

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e60fc6f2444fae7feb9964384522eb13 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e60fc6f2444fae7feb9964384522eb13" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e60fc6f2444fae7feb9964384522eb13 = L.map(
+                "map_e60fc6f2444fae7feb9964384522eb13",
+                {
+                    center: [41.02, 28.98],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_e60fc6f2444fae7feb9964384522eb13);
+
+            
+
+        
+    
+            var tile_layer_381aa54aaf8bae7eaddc833b9e6d9fc4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap contributors\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_381aa54aaf8bae7eaddc833b9e6d9fc4.addTo(map_e60fc6f2444fae7feb9964384522eb13);
+        
+    
+            var feature_group_89444003d71d6e5477b9c654670cb643 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_d3179353e894cc8c380f9193e44a5488 = L.circleMarker(
+                [41.079, 28.7985],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_89444003d71d6e5477b9c654670cb643);
+        
+    
+        var popup_a501a4aed292827610e67fe560511bd4 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_f89fb07229b08d0ac56290f568571060 = $(`<div id="html_f89fb07229b08d0ac56290f568571060" style="width: 100.0%; height: 100.0%;"><b>Ikitelli Industry</b><br>ID: C24<br>Rank: 1<br>Score: 81.2/100<br>Predicted sales: TRY 183.1m<br>10-min drive population: 396,396<br>Cannibalization risk: 1.0%<br>Opening cost: TRY 23.4m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_a501a4aed292827610e67fe560511bd4.setContent(html_f89fb07229b08d0ac56290f568571060);
+            
+        
+
+        circle_marker_d3179353e894cc8c380f9193e44a5488.bindPopup(popup_a501a4aed292827610e67fe560511bd4)
+        ;
+
+        
+    
+    
+            circle_marker_d3179353e894cc8c380f9193e44a5488.bindTooltip(
+                `<div>
+                     Optimistic P1: Ikitelli Industry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_afa6b5ab5dfc1f87df5e3ef44d6cf667 = L.circleMarker(
+                [40.9684, 29.2708],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_89444003d71d6e5477b9c654670cb643);
+        
+    
+        var popup_d2a8aed85d89620042b55c0d9da985b7 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_9aebd5c426f944a0aba6bf3051b02ae2 = $(`<div id="html_9aebd5c426f944a0aba6bf3051b02ae2" style="width: 100.0%; height: 100.0%;"><b>Sultanbeyli Square</b><br>ID: C18<br>Rank: 2<br>Score: 80.5/100<br>Predicted sales: TRY 182.3m<br>10-min drive population: 379,553<br>Cannibalization risk: 1.8%<br>Opening cost: TRY 22.3m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_d2a8aed85d89620042b55c0d9da985b7.setContent(html_9aebd5c426f944a0aba6bf3051b02ae2);
+            
+        
+
+        circle_marker_afa6b5ab5dfc1f87df5e3ef44d6cf667.bindPopup(popup_d2a8aed85d89620042b55c0d9da985b7)
+        ;
+
+        
+    
+    
+            circle_marker_afa6b5ab5dfc1f87df5e3ef44d6cf667.bindTooltip(
+                `<div>
+                     Optimistic P2: Sultanbeyli Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6b780d08229fd893dffb5772f6324dc = L.circleMarker(
+                [41.0026, 29.2317],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_89444003d71d6e5477b9c654670cb643);
+        
+    
+        var popup_287f8fdfcbb0485f82667c328bf8f8f6 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_20b8f59fb194f484297c87208f24d013 = $(`<div id="html_20b8f59fb194f484297c87208f24d013" style="width: 100.0%; height: 100.0%;"><b>Sancaktepe Hub</b><br>ID: C17<br>Rank: 3<br>Score: 80.1/100<br>Predicted sales: TRY 182.2m<br>10-min drive population: 397,428<br>Cannibalization risk: 2.6%<br>Opening cost: TRY 24.3m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_287f8fdfcbb0485f82667c328bf8f8f6.setContent(html_20b8f59fb194f484297c87208f24d013);
+            
+        
+
+        circle_marker_b6b780d08229fd893dffb5772f6324dc.bindPopup(popup_287f8fdfcbb0485f82667c328bf8f8f6)
+        ;
+
+        
+    
+    
+            circle_marker_b6b780d08229fd893dffb5772f6324dc.bindTooltip(
+                `<div>
+                     Optimistic P3: Sancaktepe Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_145a5c8ade34c4ddfc8978f482388adb = L.circleMarker(
+                [41.0757, 28.9336],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_89444003d71d6e5477b9c654670cb643);
+        
+    
+        var popup_4e5d57024fb0525e4f4cadd087be5225 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_169d042ffd34c73896d815e89d15c25a = $(`<div id="html_169d042ffd34c73896d815e89d15c25a" style="width: 100.0%; height: 100.0%;"><b>Eyupsultan Hub</b><br>ID: C07<br>Rank: 4<br>Score: 78.9/100<br>Predicted sales: TRY 184.9m<br>10-min drive population: 405,849<br>Cannibalization risk: 34.9%<br>Opening cost: TRY 23.4m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_4e5d57024fb0525e4f4cadd087be5225.setContent(html_169d042ffd34c73896d815e89d15c25a);
+            
+        
+
+        circle_marker_145a5c8ade34c4ddfc8978f482388adb.bindPopup(popup_4e5d57024fb0525e4f4cadd087be5225)
+        ;
+
+        
+    
+    
+            circle_marker_145a5c8ade34c4ddfc8978f482388adb.bindTooltip(
+                `<div>
+                     Optimistic P4: Eyupsultan Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f7f6a056828cdbac5e473df1b4bb935 = L.circleMarker(
+                [40.9872, 28.7235],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_89444003d71d6e5477b9c654670cb643);
+        
+    
+        var popup_cd7c858c45a20aac506018be6bb73c6e = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_30c7b32326bd88fd6bae35b619af6469 = $(`<div id="html_30c7b32326bd88fd6bae35b619af6469" style="width: 100.0%; height: 100.0%;"><b>Avcilar University</b><br>ID: C03<br>Rank: 5<br>Score: 78.4/100<br>Predicted sales: TRY 182.4m<br>10-min drive population: 394,377<br>Cannibalization risk: 1.0%<br>Opening cost: TRY 25.7m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_cd7c858c45a20aac506018be6bb73c6e.setContent(html_30c7b32326bd88fd6bae35b619af6469);
+            
+        
+
+        circle_marker_5f7f6a056828cdbac5e473df1b4bb935.bindPopup(popup_cd7c858c45a20aac506018be6bb73c6e)
+        ;
+
+        
+    
+    
+            circle_marker_5f7f6a056828cdbac5e473df1b4bb935.bindTooltip(
+                `<div>
+                     Optimistic P5: Avcilar University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bcb7231b2e55ba82c6e04946d30588c7 = L.circleMarker(
+                [40.8758, 29.2336],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_89444003d71d6e5477b9c654670cb643);
+        
+    
+        var popup_fb485f22791993932f5be677ccdc38f5 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_75cf459b7f6ce81898f0606fce7ef52a = $(`<div id="html_75cf459b7f6ce81898f0606fce7ef52a" style="width: 100.0%; height: 100.0%;"><b>Pendik Marina</b><br>ID: C15<br>Rank: 8<br>Score: 74.2/100<br>Predicted sales: TRY 177.6m<br>10-min drive population: 345,124<br>Cannibalization risk: 2.3%<br>Opening cost: TRY 23.9m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_fb485f22791993932f5be677ccdc38f5.setContent(html_75cf459b7f6ce81898f0606fce7ef52a);
+            
+        
+
+        circle_marker_bcb7231b2e55ba82c6e04946d30588c7.bindPopup(popup_fb485f22791993932f5be677ccdc38f5)
+        ;
+
+        
+    
+    
+            circle_marker_bcb7231b2e55ba82c6e04946d30588c7.bindTooltip(
+                `<div>
+                     Optimistic P6: Pendik Marina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_f15bce53a1a1f2f2deb928346456770c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_24e49d1c9f4951a5d12585b5db951352 = L.circleMarker(
+                [41.079, 28.7985],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f15bce53a1a1f2f2deb928346456770c);
+        
+    
+        var popup_73cf9c39a6b4c983022eac7ee6bfdf48 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_fc4f7c173cd72710ae4102162d58508b = $(`<div id="html_fc4f7c173cd72710ae4102162d58508b" style="width: 100.0%; height: 100.0%;"><b>Ikitelli Industry</b><br>ID: C24<br>Rank: 1<br>Score: 81.2/100<br>Predicted sales: TRY 183.1m<br>10-min drive population: 396,396<br>Cannibalization risk: 1.0%<br>Opening cost: TRY 23.4m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_73cf9c39a6b4c983022eac7ee6bfdf48.setContent(html_fc4f7c173cd72710ae4102162d58508b);
+            
+        
+
+        circle_marker_24e49d1c9f4951a5d12585b5db951352.bindPopup(popup_73cf9c39a6b4c983022eac7ee6bfdf48)
+        ;
+
+        
+    
+    
+            circle_marker_24e49d1c9f4951a5d12585b5db951352.bindTooltip(
+                `<div>
+                     Base P1: Ikitelli Industry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b9ad9011dc0432eb7a9d7d014193875 = L.circleMarker(
+                [40.9684, 29.2708],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f15bce53a1a1f2f2deb928346456770c);
+        
+    
+        var popup_2b47db897354cdfbd0873192098d03ab = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_c193293469ffa2627009536ae531d6f8 = $(`<div id="html_c193293469ffa2627009536ae531d6f8" style="width: 100.0%; height: 100.0%;"><b>Sultanbeyli Square</b><br>ID: C18<br>Rank: 2<br>Score: 80.5/100<br>Predicted sales: TRY 182.3m<br>10-min drive population: 379,553<br>Cannibalization risk: 1.8%<br>Opening cost: TRY 22.3m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_2b47db897354cdfbd0873192098d03ab.setContent(html_c193293469ffa2627009536ae531d6f8);
+            
+        
+
+        circle_marker_1b9ad9011dc0432eb7a9d7d014193875.bindPopup(popup_2b47db897354cdfbd0873192098d03ab)
+        ;
+
+        
+    
+    
+            circle_marker_1b9ad9011dc0432eb7a9d7d014193875.bindTooltip(
+                `<div>
+                     Base P2: Sultanbeyli Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ba2d491a6f7a3e253bccf06925be27c = L.circleMarker(
+                [41.0026, 29.2317],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f15bce53a1a1f2f2deb928346456770c);
+        
+    
+        var popup_7f48e8914749013d470aa164a7dabe3b = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_ba75cc88bb7e36e785854dd3180f57bb = $(`<div id="html_ba75cc88bb7e36e785854dd3180f57bb" style="width: 100.0%; height: 100.0%;"><b>Sancaktepe Hub</b><br>ID: C17<br>Rank: 3<br>Score: 80.1/100<br>Predicted sales: TRY 182.2m<br>10-min drive population: 397,428<br>Cannibalization risk: 2.6%<br>Opening cost: TRY 24.3m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_7f48e8914749013d470aa164a7dabe3b.setContent(html_ba75cc88bb7e36e785854dd3180f57bb);
+            
+        
+
+        circle_marker_0ba2d491a6f7a3e253bccf06925be27c.bindPopup(popup_7f48e8914749013d470aa164a7dabe3b)
+        ;
+
+        
+    
+    
+            circle_marker_0ba2d491a6f7a3e253bccf06925be27c.bindTooltip(
+                `<div>
+                     Base P3: Sancaktepe Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49a54f2ce0305a0e591aaaaeb8752484 = L.circleMarker(
+                [41.0757, 28.9336],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f15bce53a1a1f2f2deb928346456770c);
+        
+    
+        var popup_9ccd6c42d9e666224d9a4c2e14fde9ae = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_fc6bff9f7a36d791b811f47dd825aa46 = $(`<div id="html_fc6bff9f7a36d791b811f47dd825aa46" style="width: 100.0%; height: 100.0%;"><b>Eyupsultan Hub</b><br>ID: C07<br>Rank: 4<br>Score: 78.9/100<br>Predicted sales: TRY 184.9m<br>10-min drive population: 405,849<br>Cannibalization risk: 34.9%<br>Opening cost: TRY 23.4m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_9ccd6c42d9e666224d9a4c2e14fde9ae.setContent(html_fc6bff9f7a36d791b811f47dd825aa46);
+            
+        
+
+        circle_marker_49a54f2ce0305a0e591aaaaeb8752484.bindPopup(popup_9ccd6c42d9e666224d9a4c2e14fde9ae)
+        ;
+
+        
+    
+    
+            circle_marker_49a54f2ce0305a0e591aaaaeb8752484.bindTooltip(
+                `<div>
+                     Base P4: Eyupsultan Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_f15bce53a1a1f2f2deb928346456770c.addTo(map_e60fc6f2444fae7feb9964384522eb13);
+        
+    
+            var feature_group_e367467b8761cce21ce41e83a36e6e94 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_706aa388e7aa0ad29c0026545b6ee40a = L.circleMarker(
+                [41.079, 28.7985],
+                {"bubblingMouseEvents": true, "color": "#E76F51", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E76F51", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e367467b8761cce21ce41e83a36e6e94);
+        
+    
+        var popup_04933d22efcae2c7de8c80386604dd8c = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_b3c33c31948e272b4daf99d57e21abe4 = $(`<div id="html_b3c33c31948e272b4daf99d57e21abe4" style="width: 100.0%; height: 100.0%;"><b>Ikitelli Industry</b><br>ID: C24<br>Rank: 1<br>Score: 81.2/100<br>Predicted sales: TRY 183.1m<br>10-min drive population: 396,396<br>Cannibalization risk: 1.0%<br>Opening cost: TRY 23.4m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_04933d22efcae2c7de8c80386604dd8c.setContent(html_b3c33c31948e272b4daf99d57e21abe4);
+            
+        
+
+        circle_marker_706aa388e7aa0ad29c0026545b6ee40a.bindPopup(popup_04933d22efcae2c7de8c80386604dd8c)
+        ;
+
+        
+    
+    
+            circle_marker_706aa388e7aa0ad29c0026545b6ee40a.bindTooltip(
+                `<div>
+                     Pessimistic P1: Ikitelli Industry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b20bd6b10c8d30abeb4ceddd914d9e4 = L.circleMarker(
+                [40.9684, 29.2708],
+                {"bubblingMouseEvents": true, "color": "#E76F51", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E76F51", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e367467b8761cce21ce41e83a36e6e94);
+        
+    
+        var popup_9ee0033c8708c5b7040928a942ec8fa8 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_24f46c1b3869d6eadfc4e4c518292bb9 = $(`<div id="html_24f46c1b3869d6eadfc4e4c518292bb9" style="width: 100.0%; height: 100.0%;"><b>Sultanbeyli Square</b><br>ID: C18<br>Rank: 2<br>Score: 80.5/100<br>Predicted sales: TRY 182.3m<br>10-min drive population: 379,553<br>Cannibalization risk: 1.8%<br>Opening cost: TRY 22.3m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_9ee0033c8708c5b7040928a942ec8fa8.setContent(html_24f46c1b3869d6eadfc4e4c518292bb9);
+            
+        
+
+        circle_marker_3b20bd6b10c8d30abeb4ceddd914d9e4.bindPopup(popup_9ee0033c8708c5b7040928a942ec8fa8)
+        ;
+
+        
+    
+    
+            circle_marker_3b20bd6b10c8d30abeb4ceddd914d9e4.bindTooltip(
+                `<div>
+                     Pessimistic P2: Sultanbeyli Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05fc84bd442e5f6e79335b866ef0e559 = L.circleMarker(
+                [41.0858, 28.9726],
+                {"bubblingMouseEvents": true, "color": "#E76F51", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E76F51", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e367467b8761cce21ce41e83a36e6e94);
+        
+    
+        var popup_f9804015426ee06170479c03a403b6b9 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_41017052813f2560c1c730319392108e = $(`<div id="html_41017052813f2560c1c730319392108e" style="width: 100.0%; height: 100.0%;"><b>Kagithane Axis</b><br>ID: C05<br>Rank: 6<br>Score: 77.7/100<br>Predicted sales: TRY 183.5m<br>10-min drive population: 404,027<br>Cannibalization risk: 61.0%<br>Opening cost: TRY 22.0m<br><i>Decision support only - human review required.</i></div>`)[0];
+                popup_f9804015426ee06170479c03a403b6b9.setContent(html_41017052813f2560c1c730319392108e);
+            
+        
+
+        circle_marker_05fc84bd442e5f6e79335b866ef0e559.bindPopup(popup_f9804015426ee06170479c03a403b6b9)
+        ;
+
+        
+    
+    
+            circle_marker_05fc84bd442e5f6e79335b866ef0e559.bindTooltip(
+                `<div>
+                     Pessimistic P3: Kagithane Axis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_f30c552f4c4e20cbe4df7620ae0757ef_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_381aa54aaf8bae7eaddc833b9e6d9fc4,
+                },
+                overlays :  {
+                    "Optimistic portfolio" : feature_group_89444003d71d6e5477b9c654670cb643,
+                    "Base portfolio" : feature_group_f15bce53a1a1f2f2deb928346456770c,
+                    "Pessimistic portfolio" : feature_group_e367467b8761cce21ce41e83a36e6e94,
+                },
+            };
+            let layer_control_f30c552f4c4e20cbe4df7620ae0757ef = L.control.layers(
+                layer_control_f30c552f4c4e20cbe4df7620ae0757ef_layers.base_layers,
+                layer_control_f30c552f4c4e20cbe4df7620ae0757ef_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_e60fc6f2444fae7feb9964384522eb13);
+
+        
+</script>
+</html>

@@ -1,0 +1,9 @@
+factor,definition,direction,normalization,unit,weight
+market_potential,Predicted annual sales,higher,min-max,TRY million,0.22999999999999993
+accessibility,10-min drive + 15-min walk population,higher,min-max,people,0.1500000000000002
+commercial_attraction,"Commercial, transit, POI and Huff pull",higher,min-max,index,0.11000000000000003
+white_space,Capture adjusted for competition and diversion,higher,min-max,index,0.12000000000000001
+cost_efficiency,Inverse opening and operating cost burden,higher,min-max,inverse TRY,0.10000000000000002
+cannibalization_resilience,One minus overlap/diversion risk,higher,min-max,index,0.11000000000000003
+profitability,Three-year ROI proxy,higher,min-max,ratio,0.13
+delivery_confidence,Execution and prediction certainty,higher,min-max,index,0.05000000000000001

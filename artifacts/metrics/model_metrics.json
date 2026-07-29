@@ -1,0 +1,11 @@
+{
+  "validation_strategy": "5-fold GroupKFold on 12 km projected spatial blocks",
+  "rows": 320,
+  "spatial_blocks": 33,
+  "mae_try_m": 3.8185413647551996,
+  "rmse_try_m": 5.732219797686476,
+  "r2": 0.9643286739884733,
+  "mape": 0.02648478148301958,
+  "target_mean_try_m": 162.84398124999998,
+  "target_std_try_m": 30.397849154128313
+}

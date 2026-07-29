@@ -1,0 +1,52 @@
+{
+  "name": "MarmaraMartGeospatial",
+  "dataColors": [
+    "#0B3954",
+    "#2A9D8F",
+    "#F4A261",
+    "#E76F51",
+    "#3A86FF",
+    "#FFD166"
+  ],
+  "background": "#F7F3E9",
+  "foreground": "#17324D",
+  "tableAccent": "#2A9D8F",
+  "good": "#2A9D8F",
+  "neutral": "#F4A261",
+  "bad": "#E76F51",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 24,
+      "color": "#0B3954"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#17324D"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#607D8B"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}
+

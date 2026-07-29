@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this portfolio project, please cite it as below."
+title: "Geospatial Site Selection & Market Expansion Intelligence"
+version: 1.0.0
+date-released: 2026-07-29
+authors:
+  - family-names: "Gedik"
+    given-names: "Murat Miraç"
+license: MIT
+type: software
+abstract: "Auditable geospatial decision-support platform for synthetic Istanbul retail expansion."
+keywords:
+  - geospatial analytics
+  - site selection
+  - spatial machine learning
+  - location allocation
+
