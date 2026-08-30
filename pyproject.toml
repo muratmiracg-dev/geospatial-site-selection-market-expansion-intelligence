@@ -42,6 +42,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "coverage==7.15.2",
+  "pip==26.2",
   "pip-audit==2.9.0",
   "pytest==9.1.1",
   "pytest-cov==7.1.0",
@@ -49,7 +50,7 @@ dev = [
 ]
 artifacts = [
   "pillow==12.3.0",
-  "pypdf==6.14.2",
+  "pypdf==6.15.0",
   "python-pptx==1.0.2",
   "reportlab==4.4.9",
 ]
