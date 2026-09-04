@@ -37,7 +37,24 @@ def minmax(series: pd.Series, *, higher_is_better: bool = True) -> pd.Series:
 def ahp_from_weights(weights: dict[str, float]) -> tuple[pd.DataFrame, pd.Series, float]:
     """Create a fully consistent reciprocal AHP comparison matrix."""
 
-    ordered = pd.Series({factor: float(weights[factor]) for factor in SCORE_FACTORS})
+    required_factors = set(SCORE_FACTORS)
+    supplied_factors = set(weights)
+    missing_factors = sorted(required_factors - supplied_factors)
+    unexpected_factors = sorted(supplied_factors - required_factors)
+    if missing_factors or unexpected_factors:
+        details = []
+        if missing_factors:
+            details.append("missing: " + ", ".join(missing_factors))
+        if unexpected_factors:
+            details.append("unexpected: " + ", ".join(unexpected_factors))
+        raise ValueError(
+            "AHP weights must match the score factors exactly (" + "; ".join(details) + ")"
+        )
+
+    ordered = pd.Series({factor: float(weights[factor]) for factor in SCORE_FACTORS}, dtype=float)
+    if not np.isfinite(ordered).all() or (ordered <= 0).any():
+        raise ValueError("AHP weights must be finite and strictly positive")
+
     ordered = ordered / ordered.sum()
     matrix = np.divide.outer(ordered.to_numpy(), ordered.to_numpy())
     eigenvalues, eigenvectors = np.linalg.eig(matrix)
