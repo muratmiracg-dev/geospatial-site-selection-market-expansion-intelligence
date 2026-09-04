@@ -83,6 +83,9 @@ prediction.
 A reciprocal AHP comparison matrix is constructed from the approved factor-weight
 ratios. Its consistency ratio is effectively zero and passes the `<0.10` rule. Each
 factor declares its direction and uses direction-adjusted min-max normalization.
+The scoring gate requires exactly one finite, strictly positive weight for every
+approved factor and rejects missing or unknown factors before constructing the
+comparison matrix. Accepted weights are normalized to sum to one.
 
 For candidate \(i\), the score is:
 
@@ -120,4 +123,3 @@ Use score and optimization outputs to prioritize diligence, not to authorize a s
 For each shortlisted site validate exact coordinates, legal access, parcel conditions,
 live routing, traffic, visibility, competing pipeline, binding rent, fit-out capex,
 staffing, margin, opening ramp and portfolio operational capacity.
-

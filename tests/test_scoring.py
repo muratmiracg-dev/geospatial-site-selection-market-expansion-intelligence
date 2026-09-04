@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import numpy as np
 import pandas as pd
 import pytest
 
@@ -45,6 +46,27 @@ def test_ahp_consistency() -> None:
     assert matrix.shape == (8, 8)
     assert derived.sum() == pytest.approx(1.0)
     assert consistency < 0.10
+
+
+def test_ahp_rejects_missing_or_unexpected_factors() -> None:
+    weights = dict.fromkeys(SCORE_FACTORS, 1.0)
+    weights.pop(SCORE_FACTORS[0])
+    weights["unsupported_factor"] = 1.0
+
+    with pytest.raises(
+        ValueError,
+        match=r"missing: .*; unexpected: unsupported_factor",
+    ):
+        ahp_from_weights(weights)
+
+
+@pytest.mark.parametrize("invalid_weight", [0.0, -0.1, np.nan, np.inf])
+def test_ahp_rejects_non_positive_or_non_finite_weights(invalid_weight: float) -> None:
+    weights = dict.fromkeys(SCORE_FACTORS, 1.0)
+    weights[SCORE_FACTORS[0]] = invalid_weight
+
+    with pytest.raises(ValueError, match="finite and strictly positive"):
+        ahp_from_weights(weights)
 
 
 def test_scoring_contributions_reconcile() -> None:
