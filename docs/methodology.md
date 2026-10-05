@@ -111,6 +111,12 @@ a cannibalization penalty. Constraints include:
 
 The verified solver status is `Optimal` in all three scenarios.
 
+Optimization controls are validated before a model is constructed. Scenario
+catalogs must be non-empty and provide finite, positive demand, cost and budget
+assumptions plus a positive integer store cap; distance and coverage controls
+must also be finite and valid. Invalid decision controls therefore cannot
+silently produce a misleading portfolio.
+
 | Scenario | Sites | Budget used | Incremental population | Coverage | Sales | EBIT |
 |---|---:|---:|---:|---:|---:|---:|
 | Pessimistic | 3 | TRY 74.473m | 908,890 | 20.447% | TRY 466.551m | TRY -2.071m |

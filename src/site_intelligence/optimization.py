@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+import numpy as np
 import pandas as pd
 import pulp
 
@@ -16,6 +17,37 @@ class OptimizationResult:
     selections: pd.DataFrame
     summaries: pd.DataFrame
     conflicts: pd.DataFrame
+
+
+def _validate_optimization_controls(
+    scenarios: dict[str, dict[str, float]],
+    minimum_distance_km: float,
+    coverage_minutes: int,
+) -> None:
+    """Validate decision controls before constructing an optimization model."""
+    if not scenarios:
+        raise ValueError("scenarios must not be empty")
+    if not np.isfinite(minimum_distance_km) or minimum_distance_km < 0:
+        raise ValueError("minimum_distance_km must be finite and non-negative")
+    if (
+        isinstance(coverage_minutes, bool)
+        or not isinstance(coverage_minutes, int)
+        or coverage_minutes <= 0
+    ):
+        raise ValueError("coverage_minutes must be a positive integer")
+
+    required = {"demand_multiplier", "cost_multiplier", "budget_try_m", "max_stores"}
+    for name, assumptions in scenarios.items():
+        missing = required - assumptions.keys()
+        if missing:
+            raise ValueError(f"scenario {name!r} is missing {sorted(missing)}")
+        for field in ("demand_multiplier", "cost_multiplier", "budget_try_m"):
+            value = assumptions[field]
+            if isinstance(value, bool) or not np.isfinite(value) or value <= 0:
+                raise ValueError(f"scenario {name!r} {field} must be finite and positive")
+        max_stores = assumptions["max_stores"]
+        if isinstance(max_stores, bool) or not isinstance(max_stores, int) or max_stores <= 0:
+            raise ValueError(f"scenario {name!r} max_stores must be a positive integer")
 
 
 def optimize_portfolios(
@@ -31,6 +63,8 @@ def optimize_portfolios(
     coverage_minutes: int,
 ) -> OptimizationResult:
     """Solve budgeted incremental population coverage with distance conflicts."""
+
+    _validate_optimization_controls(scenarios, minimum_distance_km, coverage_minutes)
 
     candidate_ids = candidates["candidate_id"].astype(str).tolist()
     grid_indexed = grid.set_index("h3_cell")
