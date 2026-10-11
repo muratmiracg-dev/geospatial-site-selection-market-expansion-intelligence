@@ -40,6 +40,12 @@ def test_minmax_direction_and_constant() -> None:
     assert minmax(pd.Series([5, 5])).tolist() == [0.5, 0.5]
 
 
+@pytest.mark.parametrize("values", [[], [1.0, np.nan], [1.0, np.inf], ["bad", 2.0]])
+def test_minmax_rejects_invalid_factor_values(values: list[object]) -> None:
+    with pytest.raises(ValueError, match="finite numeric"):
+        minmax(pd.Series(values, dtype=object))
+
+
 def test_ahp_consistency() -> None:
     weights = {factor: 1 / len(SCORE_FACTORS) for factor in SCORE_FACTORS}
     matrix, derived, consistency = ahp_from_weights(weights)
@@ -84,3 +90,18 @@ def test_scoring_contributions_reconcile() -> None:
     for candidate_id in totals.index:
         assert totals[candidate_id] == pytest.approx(scores[candidate_id], abs=0.002)
     assert set(result.sensitivity["candidate_id"]) == set(_candidate_frame()["candidate_id"])
+
+
+def test_scoring_rejects_invalid_sensitivity_controls_and_duplicate_candidates() -> None:
+    weights = {factor: 1 / len(SCORE_FACTORS) for factor in SCORE_FACTORS}
+    with pytest.raises(ValueError, match="at least 1"):
+        score_candidates(
+            _candidate_frame(), weights, sensitivity_draws=0, concentration=60, seed=42
+        )
+    with pytest.raises(ValueError, match="strictly positive"):
+        score_candidates(
+            _candidate_frame(), weights, sensitivity_draws=10, concentration=0, seed=42
+        )
+    duplicated = pd.concat([_candidate_frame(), _candidate_frame().iloc[[0]]], ignore_index=True)
+    with pytest.raises(ValueError, match="unique, non-null"):
+        score_candidates(duplicated, weights, sensitivity_draws=10, concentration=60, seed=42)

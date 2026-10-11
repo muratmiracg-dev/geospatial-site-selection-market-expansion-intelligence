@@ -24,7 +24,9 @@ class ScoreResult:
 def minmax(series: pd.Series, *, higher_is_better: bool = True) -> pd.Series:
     """Min-max normalize with explicit direction and constant-column handling."""
 
-    numeric = series.astype(float)
+    numeric = pd.to_numeric(series, errors="coerce")
+    if numeric.empty or not np.isfinite(numeric).all():
+        raise ValueError("scoring factors must contain finite numeric values")
     span = numeric.max() - numeric.min()
     normalized = (
         pd.Series(0.5, index=series.index, dtype=float)
@@ -174,6 +176,19 @@ def score_candidates(
     seed: int,
 ) -> ScoreResult:
     """Score candidates, expose factor contributions, and quantify rank stability."""
+
+    if isinstance(sensitivity_draws, bool) or not isinstance(sensitivity_draws, int):
+        raise TypeError("sensitivity_draws must be an integer")
+    if sensitivity_draws < 1:
+        raise ValueError("sensitivity_draws must be at least 1")
+    if not np.isfinite(concentration) or concentration <= 0:
+        raise ValueError("concentration must be finite and strictly positive")
+    if (
+        candidates.empty
+        or candidates["candidate_id"].isna().any()
+        or not candidates["candidate_id"].is_unique
+    ):
+        raise ValueError("candidates must contain unique, non-null candidate_id values")
 
     result, specification = _derive_factors(candidates)
     matrix, ahp_weights, consistency_ratio = ahp_from_weights(weights)

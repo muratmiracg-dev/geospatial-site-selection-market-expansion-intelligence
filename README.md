@@ -1,5 +1,7 @@
 # Geospatial Site Selection & Market Expansion Intelligence
 
+Candidate scoring fails closed on missing or non-finite factors, duplicate candidate identifiers, and invalid sensitivity controls so rankings cannot be published from malformed assumptions.
+
 An auditable, end-to-end decision-support platform for the fictional **MarmaraMart**
 retail chain in metropolitan Istanbul. The project combines H3 microzones, network
 accessibility, competitive white-space analysis, Huff customer-share modeling,
