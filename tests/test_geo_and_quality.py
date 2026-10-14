@@ -46,3 +46,19 @@ def test_quality_check_detects_duplicate_geometry() -> None:
     assert duplicate.status == "WARN"
     summary = quality_summary(__import__("pandas").DataFrame([check.__dict__ for check in checks]))
     assert summary["critical_failures"] == 0
+
+
+def test_quality_check_fails_closed_on_invalid_identifiers() -> None:
+    frame = gpd.GeoDataFrame(
+        {"id": ["A", " ", None], "value": [1, 2, 3]},
+        geometry=[Point(29.0, 41.0), Point(29.1, 41.1), Point(29.2, 41.2)],
+        crs="EPSG:4326",
+    )
+    checks = validate_geodataframe("sample", frame, id_column="id")
+    missing = next(check for check in checks if check.check == "missing_identifier")
+    assert missing.status == "FAIL"
+    assert missing.observed == 2
+
+    checks = validate_geodataframe("sample", frame, id_column="unknown")
+    present = next(check for check in checks if check.check == "identifier_column_present")
+    assert present.status == "FAIL"

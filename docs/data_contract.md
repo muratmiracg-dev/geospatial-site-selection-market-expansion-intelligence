@@ -12,6 +12,8 @@
 - Rates are decimal values in `[0, 1]`.
 - A data-quality warning may publish only if it is explicitly non-critical; failures
   block the pipeline.
+- Missing identifier columns and null or blank identifiers are critical failures,
+  preventing ambiguous joins and candidate rankings.
 
 Machine-readable schemas are in `data/contracts/`.
 

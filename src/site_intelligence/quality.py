@@ -92,6 +92,27 @@ def validate_geodataframe(
         )
     )
     if id_column:
+        if id_column not in frame.columns:
+            checks.append(
+                QualityCheck(
+                    name, "identifier_column_present", "FAIL", "missing", id_column, "critical"
+                )
+            )
+            return checks
+        identifiers = frame[id_column]
+        missing_id = int(
+            (identifiers.isna() | identifiers.astype("string").str.strip().eq("")).sum()
+        )
+        checks.append(
+            QualityCheck(
+                name,
+                "missing_identifier",
+                "PASS" if missing_id == 0 else "FAIL",
+                missing_id,
+                0,
+                "critical",
+            )
+        )
         duplicate_id = int(frame[id_column].duplicated().sum())
         checks.append(
             QualityCheck(
