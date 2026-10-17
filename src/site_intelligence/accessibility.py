@@ -115,6 +115,13 @@ def reachable(
 ) -> Reachability:
     """Return cells and population reachable within a network-time cutoff."""
 
+    if mode not in {"drive", "walk"}:
+        raise ValueError("mode must be either drive or walk")
+    if isinstance(minutes, bool) or not isinstance(minutes, int) or minutes <= 0:
+        raise ValueError("minutes must be a positive integer")
+    if source_cell not in graph:
+        raise ValueError("source_cell must exist in the transport graph")
+
     weight = f"{mode}_minutes"
     lengths = nx.single_source_dijkstra_path_length(
         graph,
@@ -145,6 +152,25 @@ def calculate_location_reachability(
     include_geometries: bool = True,
 ) -> tuple[pd.DataFrame, gpd.GeoDataFrame, dict[tuple[str, str, int], Reachability]]:
     """Calculate drive/walk reachability for every location and threshold."""
+
+    if id_column not in locations:
+        raise ValueError("id_column must exist in locations")
+    identifiers = locations[id_column]
+    if (
+        identifiers.isna().any()
+        or identifiers.astype(str).str.strip().eq("").any()
+        or identifiers.astype(str).duplicated().any()
+    ):
+        raise ValueError("location identifiers must be populated and unique")
+    if (
+        not thresholds
+        or len(thresholds) != len(set(thresholds))
+        or any(
+            isinstance(value, bool) or not isinstance(value, int) or value <= 0
+            for value in thresholds
+        )
+    ):
+        raise ValueError("thresholds must be unique positive integers")
 
     records: list[dict[str, int | float | str]] = []
     geometry_records: list[dict[str, int | float | str]] = []
