@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import geopandas as gpd
+import networkx as nx
+import pytest
 from shapely.geometry import Point
 
+from site_intelligence.accessibility import calculate_location_reachability, reachable
 from site_intelligence.data_generation import (
     generate_candidates,
     generate_existing_stores,
@@ -62,3 +65,38 @@ def test_quality_check_fails_closed_on_invalid_identifiers() -> None:
     checks = validate_geodataframe("sample", frame, id_column="unknown")
     present = next(check for check in checks if check.check == "identifier_column_present")
     assert present.status == "FAIL"
+
+
+@pytest.mark.parametrize(
+    ("source", "mode", "minutes"),
+    [("A", "cycle", 10), ("A", "drive", 0), ("A", "walk", True), ("UNKNOWN", "walk", 10)],
+)
+def test_reachability_rejects_invalid_controls(source: str, mode: str, minutes: int) -> None:
+    graph = nx.Graph()
+    graph.add_node("A")
+    grid = gpd.GeoDataFrame(
+        {"h3_cell": ["A"], "population": [1], "demand_weight": [1.0]},
+        geometry=[Point(29.0, 41.0)],
+        crs="EPSG:4326",
+    )
+    with pytest.raises(ValueError):
+        reachable(graph, grid, source, mode=mode, minutes=minutes)
+
+
+def test_location_reachability_rejects_invalid_identifiers_and_thresholds() -> None:
+    locations = gpd.GeoDataFrame(
+        {"site_id": ["A", "A"], "latitude": [41.0, 41.1], "longitude": [29.0, 29.1]},
+        geometry=[Point(29.0, 41.0), Point(29.1, 41.1)],
+        crs="EPSG:4326",
+    )
+    grid = locations.rename(columns={"site_id": "h3_cell"}).assign(population=1, demand_weight=1.0)
+    with pytest.raises(ValueError, match="identifiers"):
+        calculate_location_reachability(
+            locations, grid, nx.Graph(), id_column="site_id", thresholds=[5]
+        )
+
+    unique = locations.iloc[[0]].copy()
+    with pytest.raises(ValueError, match="thresholds"):
+        calculate_location_reachability(
+            unique, grid, nx.Graph(), id_column="site_id", thresholds=[5, 5]
+        )
