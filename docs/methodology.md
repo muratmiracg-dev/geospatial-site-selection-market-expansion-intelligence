@@ -1,5 +1,8 @@
 # Methodology
 
+Network accessibility fails closed when travel mode, time thresholds, source cells, or location
+identifiers violate the routing contract. Location IDs must be populated and unique, and service
+area thresholds must be distinct positive integers before any isochrone is calculated.
 ## 1. Decision framing
 
 The unit of analysis is a candidate retail site; the decision unit is a multi-site
