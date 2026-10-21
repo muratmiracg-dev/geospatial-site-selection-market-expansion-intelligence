@@ -41,6 +41,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+  "certifi==2026.10.19",
   "coverage==7.15.2",
   "pip-audit==2.9.0",
   "pytest==9.1.1",
@@ -49,7 +50,7 @@ dev = [
   "urllib3==2.8.0",
 ]
 artifacts = [
-  "pillow==12.3.0",
+  "pillow==13.0.0",
   "pypdf==6.19.0",
   "python-pptx==1.0.2",
   "reportlab==4.4.9",
