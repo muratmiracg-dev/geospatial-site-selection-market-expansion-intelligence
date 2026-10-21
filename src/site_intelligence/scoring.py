@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import numbers
 from dataclasses import dataclass
 
 import numpy as np
@@ -53,6 +54,12 @@ def ahp_from_weights(weights: dict[str, float]) -> tuple[pd.DataFrame, pd.Series
             "AHP weights must match the score factors exactly (" + "; ".join(details) + ")"
         )
 
+    if any(
+        isinstance(weights[factor], (bool, np.bool_))
+        or not isinstance(weights[factor], numbers.Real)
+        for factor in SCORE_FACTORS
+    ):
+        raise ValueError("AHP weights must be native numeric values, not booleans or strings")
     ordered = pd.Series({factor: float(weights[factor]) for factor in SCORE_FACTORS}, dtype=float)
     if not np.isfinite(ordered).all() or (ordered <= 0).any():
         raise ValueError("AHP weights must be finite and strictly positive")
@@ -181,8 +188,15 @@ def score_candidates(
         raise TypeError("sensitivity_draws must be an integer")
     if sensitivity_draws < 1:
         raise ValueError("sensitivity_draws must be at least 1")
-    if not np.isfinite(concentration) or concentration <= 0:
+    if (
+        isinstance(concentration, (bool, np.bool_))
+        or not isinstance(concentration, numbers.Real)
+        or not np.isfinite(concentration)
+        or concentration <= 0
+    ):
         raise ValueError("concentration must be finite and strictly positive")
+    if isinstance(seed, (bool, np.bool_)) or not isinstance(seed, (int, np.integer)):
+        raise TypeError("seed must be an integer")
     if (
         candidates.empty
         or candidates["candidate_id"].isna().any()
