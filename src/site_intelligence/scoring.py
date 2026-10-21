@@ -55,7 +55,7 @@ def ahp_from_weights(weights: dict[str, float]) -> tuple[pd.DataFrame, pd.Series
         )
 
     if any(
-        isinstance(weights[factor], (bool, np.bool_))
+        isinstance(weights[factor], bool | np.bool_)
         or not isinstance(weights[factor], numbers.Real)
         for factor in SCORE_FACTORS
     ):
@@ -189,13 +189,13 @@ def score_candidates(
     if sensitivity_draws < 1:
         raise ValueError("sensitivity_draws must be at least 1")
     if (
-        isinstance(concentration, (bool, np.bool_))
+        isinstance(concentration, bool | np.bool_)
         or not isinstance(concentration, numbers.Real)
         or not np.isfinite(concentration)
         or concentration <= 0
     ):
         raise ValueError("concentration must be finite and strictly positive")
-    if isinstance(seed, (bool, np.bool_)) or not isinstance(seed, (int, np.integer)):
+    if isinstance(seed, bool | np.bool_) or not isinstance(seed, int | np.integer):
         raise TypeError("seed must be an integer")
     if (
         candidates.empty
