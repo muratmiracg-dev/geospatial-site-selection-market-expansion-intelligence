@@ -75,6 +75,14 @@ def test_ahp_rejects_non_positive_or_non_finite_weights(invalid_weight: float) -
         ahp_from_weights(weights)
 
 
+@pytest.mark.parametrize("invalid_weight", [True, "1.0"])
+def test_ahp_rejects_coercible_weights(invalid_weight: object) -> None:
+    weights = dict.fromkeys(SCORE_FACTORS, 1.0)
+    weights[SCORE_FACTORS[0]] = invalid_weight
+    with pytest.raises(ValueError, match="native numeric"):
+        ahp_from_weights(weights)
+
+
 def test_scoring_contributions_reconcile() -> None:
     weights = {factor: 1 / len(SCORE_FACTORS) for factor in SCORE_FACTORS}
     result = score_candidates(
@@ -101,6 +109,10 @@ def test_scoring_rejects_invalid_sensitivity_controls_and_duplicate_candidates()
     with pytest.raises(ValueError, match="strictly positive"):
         score_candidates(
             _candidate_frame(), weights, sensitivity_draws=10, concentration=0, seed=42
+        )
+    with pytest.raises(TypeError, match="seed"):
+        score_candidates(
+            _candidate_frame(), weights, sensitivity_draws=10, concentration=60, seed=True
         )
     duplicated = pd.concat([_candidate_frame(), _candidate_frame().iloc[[0]]], ignore_index=True)
     with pytest.raises(ValueError, match="unique, non-null"):
