@@ -51,7 +51,7 @@ dev = [
 ]
 artifacts = [
   "pillow==13.0.0",
-  "pypdf==6.19.0",
+  "pypdf==6.21.1",
   "python-pptx==1.0.2",
   "reportlab==4.4.9",
 ]
