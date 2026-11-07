@@ -14,10 +14,11 @@ branca==0.8.2
     # via folium
 cachecontrol==0.14.4
     # via pip-audit
-certifi==2026.7.22
+certifi==2026.10.19
     # via
     #   httpcore
     #   httpx
+    #   istanbul-site-intelligence
     #   pyogrio
     #   pyproj
     #   requests
@@ -34,20 +35,26 @@ colorama==0.4.6 ; sys_platform == 'win32'
     #   click
     #   pytest
     #   tqdm
+contourpy==1.3.3
+    # via matplotlib
 coverage==7.15.2
     # via
     #   istanbul-site-intelligence
     #   pytest-cov
+cycler==0.12.1
+    # via matplotlib
 cyclonedx-python-lib==9.1.0
     # via pip-audit
 defusedxml==0.7.1
     # via py-serializable
 fastapi==0.141.0
     # via istanbul-site-intelligence
-filelock==3.32.0
+filelock==4.2.9
     # via cachecontrol
 folium==0.20.0
     # via istanbul-site-intelligence
+fonttools==4.63.0
+    # via matplotlib
 geoalchemy2==0.18.0
     # via istanbul-site-intelligence
 geopandas==1.1.4
@@ -75,10 +82,12 @@ jinja2==3.1.6
     # via
     #   branca
     #   folium
-joblib==1.5.1
+joblib==1.5.3
     # via
     #   istanbul-site-intelligence
     #   scikit-learn
+kiwisolver==1.5.0
+    # via matplotlib
 license-expression==30.4.4
     # via cyclonedx-python-lib
 llvmlite==0.45.1
@@ -91,9 +100,13 @@ markdown-it-py==4.2.0
     # via rich
 markupsafe==3.0.3
     # via jinja2
+matplotlib==3.10.8
+    # via
+    #   istanbul-site-intelligence
+    #   seaborn
 mdurl==0.1.2
     # via markdown-it-py
-msgpack==1.2.1
+msgpack==1.2.4
     # via cachecontrol
 narwhals==2.24.0
     # via plotly
@@ -103,14 +116,17 @@ numba==0.62.1
     # via shap
 numpy==2.3.5
     # via
+    #   contourpy
     #   folium
     #   geopandas
     #   istanbul-site-intelligence
+    #   matplotlib
     #   numba
     #   pandas
     #   pyogrio
     #   scikit-learn
     #   scipy
+    #   seaborn
     #   shap
     #   shapely
 packageurl-python==0.17.6
@@ -119,6 +135,7 @@ packaging==26.2
     # via
     #   geoalchemy2
     #   geopandas
+    #   matplotlib
     #   pip-audit
     #   pip-requirements-parser
     #   plotly
@@ -129,13 +146,15 @@ pandas==2.2.3
     # via
     #   geopandas
     #   istanbul-site-intelligence
+    #   seaborn
     #   shap
-pillow==12.3.0
+pillow==13.0.0
     # via
     #   istanbul-site-intelligence
+    #   matplotlib
     #   python-pptx
     #   reportlab
-pip==26.1.2
+pip==26.2.1
     # via pip-api
 pip-api==0.0.34
     # via pip-audit
@@ -172,8 +191,10 @@ pygments==2.20.0
 pyogrio==0.13.0
     # via geopandas
 pyparsing==3.3.2
-    # via pip-requirements-parser
-pypdf==6.14.2
+    # via
+    #   matplotlib
+    #   pip-requirements-parser
+pypdf==6.21.4
     # via istanbul-site-intelligence
 pyproj==3.7.2
     # via
@@ -186,7 +207,9 @@ pytest==9.1.1
 pytest-cov==7.1.0
     # via istanbul-site-intelligence
 python-dateutil==2.9.0.post0
-    # via pandas
+    # via
+    #   matplotlib
+    #   pandas
 python-pptx==1.0.2
     # via istanbul-site-intelligence
 pytz==2026.3.post1
@@ -213,6 +236,8 @@ scipy==1.17.0
     #   istanbul-site-intelligence
     #   scikit-learn
     #   shap
+seaborn==0.13.2
+    # via istanbul-site-intelligence
 shap==0.52.0
     # via istanbul-site-intelligence
 shapely==2.1.1
@@ -256,8 +281,10 @@ tzdata==2026.3
     # via
     #   pandas
     #   psycopg
-urllib3==2.7.0
-    # via requests
+urllib3==2.8.0
+    # via
+    #   istanbul-site-intelligence
+    #   requests
 uvicorn==0.35.0
     # via istanbul-site-intelligence
 xlsxwriter==3.2.9
