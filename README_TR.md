@@ -16,7 +16,7 @@ birleştirir.
 |---|---:|
 | H3 çözünürlük-8 mikro-bölge | 5.965 |
 | Aday / mevcut mağaza / rakip / POI | 24 / 10 / 96 / 720 |
-| Veri kalite kontrolü | 46 toplam; 44 geçti; 2 uyarı; 0 hata |
+| Veri kalite kontrolü | 52 toplam; 50 geçti; 2 uyarı; 0 hata |
 | Test / branch coverage | 13 geçti / %96,44 |
 | Kilitli bağımlılık denetimi | 87 paket / 0 bilinen zafiyet |
 | Spatial CV benchmark | 320 sentetik lokasyon, 33 spatial block |

@@ -7,72 +7,72 @@
     {
       "check": "exists:artifacts/metrics/pipeline_summary.json",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/metrics/pipeline_summary.json"
+      "details": "artifacts/metrics/pipeline_summary.json"
     },
     {
       "check": "exists:artifacts/data/candidate_scores.csv",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/candidate_scores.csv"
+      "details": "artifacts/data/candidate_scores.csv"
     },
     {
       "check": "exists:artifacts/data/scenario_summaries.csv",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/scenario_summaries.csv"
+      "details": "artifacts/data/scenario_summaries.csv"
     },
     {
       "check": "exists:artifacts/data/scenario_selections.csv",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/scenario_selections.csv"
+      "details": "artifacts/data/scenario_selections.csv"
     },
     {
       "check": "exists:artifacts/data/factor_specification.csv",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/data/factor_specification.csv"
+      "details": "artifacts/data/factor_specification.csv"
     },
     {
       "check": "exists:artifacts/qa/data_quality_summary.json",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/qa/data_quality_summary.json"
+      "details": "artifacts/qa/data_quality_summary.json"
     },
     {
       "check": "exists:artifacts/maps/candidate_portfolio_map.html",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/candidate_portfolio_map.html"
+      "details": "artifacts/maps/candidate_portfolio_map.html"
     },
     {
       "check": "exists:artifacts/maps/white_space_h3_map.html",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/white_space_h3_map.html"
+      "details": "artifacts/maps/white_space_h3_map.html"
     },
     {
       "check": "exists:artifacts/maps/network_isochrones_map.html",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/network_isochrones_map.html"
+      "details": "artifacts/maps/network_isochrones_map.html"
     },
     {
       "check": "exists:artifacts/maps/scenario_portfolios_map.html",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/artifacts/maps/scenario_portfolios_map.html"
+      "details": "artifacts/maps/scenario_portfolios_map.html"
     },
     {
       "check": "exists:excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx"
+      "details": "excel/Istanbul_Location_Evaluation_Scenario_Workbook.xlsx"
     },
     {
       "check": "exists:presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx"
+      "details": "presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx"
     },
     {
       "check": "exists:report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf"
+      "details": "report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf"
     },
     {
       "check": "exists:powerbi/MarketExpansion.pbip",
       "status": "PASS",
-      "details": "/workspace/scratch/817cf97d51b7/geospatial-site-selection-market-expansion-intelligence/powerbi/MarketExpansion.pbip"
+      "details": "powerbi/MarketExpansion.pbip"
     },
     {
       "check": "pipeline_status",

@@ -43,7 +43,7 @@ def main() -> int:
         check(
             target.is_file() and target.stat().st_size > 0,
             f"exists:{relative}",
-            str(target),
+            relative,
             results,
         )
 

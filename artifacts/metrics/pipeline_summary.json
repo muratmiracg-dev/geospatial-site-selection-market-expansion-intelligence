@@ -30,8 +30,8 @@
     "target_std_try_m": 30.397849154128313
   },
   "quality": {
-    "checks": 46,
-    "passed": 44,
+    "checks": 52,
+    "passed": 50,
     "warnings": 2,
     "failed": 0,
     "critical_failures": 0
