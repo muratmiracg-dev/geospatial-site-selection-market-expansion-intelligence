@@ -27,6 +27,12 @@ jobs:
       - run: uv sync --all-extras --locked
       - run: uv run ruff format --check .
       - run: uv run ruff check .
+      # MANIFEST.sha256 is the published hash ledger; it went stale for 19 files when
+      # nothing checked it. Rebuild it from the clean checkout and require no diff.
+      - name: Hash ledger matches the committed files
+        run: |
+          uv run python scripts/generate_manifest.py
+          git diff --exit-code -- MANIFEST.sha256 project_manifest.json repository_tree.txt
 
   tests:
     runs-on: ubuntu-latest
@@ -61,6 +67,13 @@ jobs:
         with:
           python-version: "3.12"
       - run: uv sync --all-extras --locked
+      # verify_artifacts.py checks internal consistency after the run rewrites the
+      # outputs; this copy lets CI also prove the committed values are reproducible.
+      - run: |
+          mkdir -p "$RUNNER_TEMP/committed/data" "$RUNNER_TEMP/committed/artifacts"
+          cp -r data/processed "$RUNNER_TEMP/committed/data/processed"
+          cp -r artifacts/data artifacts/metrics "$RUNNER_TEMP/committed/artifacts/"
       - run: uv run site-intelligence run --config configs/base.yaml
+      - run: uv run python scripts/compare_outputs.py "$RUNNER_TEMP/committed"
       - run: uv run python scripts/verify_artifacts.py
 

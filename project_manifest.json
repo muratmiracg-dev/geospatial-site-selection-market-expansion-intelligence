@@ -1,8 +1,8 @@
 {
   "project": "Geospatial Site Selection & Market Expansion Intelligence",
   "status": "READY_FOR_REVIEW_NOT_PUBLISHED",
-  "file_count": 172,
-  "total_bytes": 18970267,
+  "file_count": 175,
+  "total_bytes": 18992858,
   "hash_ledger_exclusions": [
     ".coverage",
     "Geospatial_Site_Selection_Market_Expansion_Intelligence_READY_FOR_REVIEW.zip",
@@ -38,8 +38,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 1536,
-      "sha256": "e8ae72c91613aec376532e5dbb4658283c4fdbd4620590a73bb2ac1616665f39"
+      "bytes": 2422,
+      "sha256": "abf962f249564b35fc905ad170e5665fc17bca42006eb0292a91157753d51f78"
     },
     {
       "path": ".github/workflows/codeql.yml",
@@ -88,13 +88,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 5899,
-      "sha256": "702d90c89f5bb60b5f1c501416b20d2e6a2f63a5f49034463051b18af166a29c"
+      "bytes": 6623,
+      "sha256": "d5e5b0c4d00c00c8d4dbe265249ca87215e89d09b1803f4c6f14f95291aab5fc"
     },
     {
       "path": "README_TR.md",
       "bytes": 4025,
-      "sha256": "5cbd7b61be74c65447c4779540d50e424abf77b01e72179fa69962ad3f10b2cc"
+      "sha256": "aa151e18273e785e78f0d34fd713a04b500c5c8e307c2c96e658b8e25c13517b"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -254,7 +254,7 @@
     {
       "path": "artifacts/metrics/pipeline_summary.json",
       "bytes": 1246,
-      "sha256": "3c2f5751ff85ab2b1942f5b5b54b7fcab55411f6b9f1f72032353bdbd6cf53de"
+      "sha256": "f5a6aa6c1794618da74eb4f825fc7d734d60e5a2c1f23d32d9598891c2a8d84c"
     },
     {
       "path": "artifacts/models/demand_model.joblib",
@@ -263,13 +263,13 @@
     },
     {
       "path": "artifacts/qa/artifact_verification.json",
-      "bytes": 6859,
-      "sha256": "64f792429a8c9bdba4513d2c400083fcb2df25df8eb8507dac74a83254a5ce3b"
+      "bytes": 5627,
+      "sha256": "abf7cfa06850db6164e88328550da49766594bd456b4d7d1d9ecca1ea0fa6600"
     },
     {
       "path": "artifacts/qa/audited_requirements.txt",
-      "bytes": 5533,
-      "sha256": "6d6c77efb91f94ba238176795c1dc479e78e2a7fbe8315c1c94fb6bf765500f0"
+      "bytes": 6057,
+      "sha256": "17e93862f94a67ad2a9d82f58dcbc5cdba15f403ee87991096dc6191a9e3dc7b"
     },
     {
       "path": "artifacts/qa/coverage.json",
@@ -283,13 +283,13 @@
     },
     {
       "path": "artifacts/qa/data_quality_checks.csv",
-      "bytes": 2479,
-      "sha256": "f2802d674ac5091078c76e64fbcfa3dbdc9a60c8bfe79feed1cb69b30276370e"
+      "bytes": 2760,
+      "sha256": "1150de6c9d607cbae3272ccbc8ea94eae1327f98d4d542f5ba8e1be4748dfed6"
     },
     {
       "path": "artifacts/qa/data_quality_summary.json",
       "bytes": 92,
-      "sha256": "ea93bc97961f05bc06ee51ca499f37b1f3824b87b8c61d0bd34da96aab7d68aa"
+      "sha256": "3f1f92996bfa1d65fd942bd4df3383c7e75f50ba9e8b22af120df9e1dd5621b7"
     },
     {
       "path": "artifacts/qa/excel_formula_scan.ndjson",
@@ -438,8 +438,8 @@
     },
     {
       "path": "docs/data_contract.md",
-      "bytes": 3143,
-      "sha256": "78a49cb9a87cebd41c71c8b0b01b864811e070aed1559168f1c18ec5f240a91c"
+      "bytes": 3278,
+      "sha256": "0c65d0857b85a4a9ec7b0f22d212594b01c6f596d0ae75c4e3a69f03d4808b17"
     },
     {
       "path": "docs/data_dictionary.md",
@@ -473,8 +473,8 @@
     },
     {
       "path": "docs/methodology.md",
-      "bytes": 5337,
-      "sha256": "589df1e8cf33004af838696986e92246fb67635306a315b130b34bfba227ef57"
+      "bytes": 6192,
+      "sha256": "c1118d3150b522bf889b05528cbffb24da75653373115788a7149e5b25ee767b"
     },
     {
       "path": "docs/model_card.md",
@@ -678,13 +678,13 @@
     },
     {
       "path": "presentation/Istanbul_Geospatial_Market_Expansion_Executive_Deck.pptx",
-      "bytes": 1689016,
-      "sha256": "dc96626d26ce2f71d3c70bad9c31e0f976f76494a23e2decaedfdcc20050c71b"
+      "bytes": 1688884,
+      "sha256": "5f06c18f162176c548a68ff9660429ba9c28c609216bd6c0f56f85e9da1fe1ad"
     },
     {
       "path": "pyproject.toml",
-      "bytes": 2029,
-      "sha256": "050ce8e08e8c15ff67657cf9b95c165ec205928c23faad4edb75e6bb176512c2"
+      "bytes": 2074,
+      "sha256": "7990b5245de5c879866040bb1a3644bbbff23da2aefec5aeba60648dbaf33fd2"
     },
     {
       "path": "report/Istanbul_Geospatial_Site_Selection_Methodology_Governance_Report.pdf",
@@ -712,6 +712,11 @@
       "sha256": "967d8d223e56ad18085e2f30ef7722cd40b277a85fc862cf32f5bb317ee338e8"
     },
     {
+      "path": "scripts/compare_outputs.py",
+      "bytes": 5107,
+      "sha256": "c38e71f3c598512ba61f10c760a39473ac787975314cf98eedfafc06575ef6d3"
+    },
+    {
       "path": "scripts/generate_manifest.py",
       "bytes": 2880,
       "sha256": "536e6f4487f23300fcc42dacef5d8501d831e5bc39ecff0ef5bb949392ea0643"
@@ -723,8 +728,8 @@
     },
     {
       "path": "scripts/verify_artifacts.py",
-      "bytes": 7712,
-      "sha256": "8ab3c363fd803d6854fe9a47e63ae91fd9337824324f96309ae27f0df7f684bc"
+      "bytes": 7709,
+      "sha256": "7e9884b393cc11dffd3fe2155664402a137f495dc2c17f89f3acf7a66acb7841"
     },
     {
       "path": "sql/schema.sql",
@@ -748,8 +753,8 @@
     },
     {
       "path": "src/site_intelligence/accessibility.py",
-      "bytes": 6660,
-      "sha256": "7fbedc046c52467a5611a5887240950f76a5e9b0beaf679419b7ed6784b9ccd4"
+      "bytes": 7695,
+      "sha256": "17ee6fb507327e96234493850cb001b3ee50250b8e306a45fd1284762a337082"
     },
     {
       "path": "src/site_intelligence/api/__init__.py",
@@ -823,8 +828,8 @@
     },
     {
       "path": "src/site_intelligence/optimization.py",
-      "bytes": 8084,
-      "sha256": "ab6c2dabbb829b251d76eead758d97ab4b6247f5ef6583b3639fcca688f49705"
+      "bytes": 9669,
+      "sha256": "56e9a3f918f60421eca9130bef31c8e451d717dba6699ae01e141b789b181df0"
     },
     {
       "path": "src/site_intelligence/pipeline.py",
@@ -833,13 +838,13 @@
     },
     {
       "path": "src/site_intelligence/quality.py",
-      "bytes": 4814,
-      "sha256": "a9b573dc500df033e61cbd3c04dd7d51ee6dca87e9bca60237b0d195ff1234d1"
+      "bytes": 5495,
+      "sha256": "69b8fd4310b5ab69ef62b4389d63301a9329d194dc5c3a76c7f7c8639e27a426"
     },
     {
       "path": "src/site_intelligence/scoring.py",
-      "bytes": 9385,
-      "sha256": "522d56f43730caf43ba9185a06012cec034df3a7f53bb4a6937792ac9c8d6e3c"
+      "bytes": 11466,
+      "sha256": "71bc119fe71239a100dad38be8ea78f91b89d86dff5584290eee7119875c66f5"
     },
     {
       "path": "tests/conftest.py",
@@ -852,9 +857,19 @@
       "sha256": "622ecb6a70226fd3add0ea5c206ba2dbd20c52f0494b2fbb01854dfdad0c0375"
     },
     {
+      "path": "tests/test_compare_outputs.py",
+      "bytes": 2644,
+      "sha256": "05042d76511b558517668a1cdc4fc7c5133a7cdff26fc1921a60e274a49d7951"
+    },
+    {
       "path": "tests/test_geo_and_quality.py",
-      "bytes": 1731,
-      "sha256": "903d1358d5125bf321c004805384ca7359297844b8509fc2d239a8a3c6ff93b7"
+      "bytes": 3915,
+      "sha256": "952deb21e3f0be9d959045054247a88067156c6c86999057b9e87fe35bea453c"
+    },
+    {
+      "path": "tests/test_optimization_controls.py",
+      "bytes": 1063,
+      "sha256": "b7e388354f3394e0bed3110746cf13d252dbea4c79305cd47c20efe5c196d1a7"
     },
     {
       "path": "tests/test_pipeline_outputs.py",
@@ -863,13 +878,13 @@
     },
     {
       "path": "tests/test_scoring.py",
-      "bytes": 2529,
-      "sha256": "b101fcdff44d5e3ccfc0049fa05fa398c5c6572a1542aa9669fcaabdfa1898a0"
+      "bytes": 4806,
+      "sha256": "7328d581c436f931ca2a5d7ba33e636c6727a6b0b01ebdcd3c636a6838e9eb73"
     },
     {
       "path": "uv.lock",
-      "bytes": 154004,
-      "sha256": "a9c8cc2558cbd3310756246505628f1d881861aa16e4572fd9be19d73d4dca34"
+      "bytes": 155855,
+      "sha256": "4d55363df513b5f5f4d9f5006491ebb67a5dd772718c784ccb07aa094e4cff85"
     }
   ]
 }
