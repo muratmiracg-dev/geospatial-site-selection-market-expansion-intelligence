@@ -93,6 +93,12 @@ pytest --cov=site_intelligence --cov-report=term-missing --cov-fail-under=90
 python scripts/verify_artifacts.py
 ```
 
+CI also keeps a copy of `data/processed`, `artifacts/data` and `artifacts/metrics`,
+reruns the pipeline and runs `python scripts/compare_outputs.py <copy>`: every committed
+CSV, JSON and GeoJSON value must be reproduced (numbers within a relative 1e-9; run time
+ignored). It rebuilds `MANIFEST.sha256` with `scripts/generate_manifest.py` and fails if
+the committed hash ledger differs.
+
 Container stack:
 
 ```bash
