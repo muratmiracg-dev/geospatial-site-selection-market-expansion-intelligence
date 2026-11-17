@@ -168,6 +168,7 @@ geospatial-site-selection-market-expansion-intelligence/
 │   │   ├── build_presentation.mjs
 │   │   └── README.md
 │   ├── build_methodology_report.py
+│   ├── compare_outputs.py
 │   ├── generate_manifest.py
 │   ├── load_postgis.py
 │   └── verify_artifacts.py
@@ -201,7 +202,9 @@ geospatial-site-selection-market-expansion-intelligence/
 ├── tests
 │   ├── conftest.py
 │   ├── test_api.py
+│   ├── test_compare_outputs.py
 │   ├── test_geo_and_quality.py
+│   ├── test_optimization_controls.py
 │   ├── test_pipeline_outputs.py
 │   └── test_scoring.py
 ├── .dockerignore
