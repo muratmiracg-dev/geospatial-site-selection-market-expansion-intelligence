@@ -2,7 +2,7 @@
   "project": "Geospatial Site Selection & Market Expansion Intelligence",
   "status": "READY_FOR_REVIEW_NOT_PUBLISHED",
   "file_count": 175,
-  "total_bytes": 18992858,
+  "total_bytes": 18995737,
   "hash_ledger_exclusions": [
     ".coverage",
     "Geospatial_Site_Selection_Market_Expansion_Intelligence_READY_FOR_REVIEW.zip",
@@ -158,13 +158,13 @@
     },
     {
       "path": "artifacts/data/scenario_selections.csv",
-      "bytes": 1110,
-      "sha256": "6bf48d8768f8482bf0d7188f480c3a495664b462ed0ffdd7ad1f1193fc95426f"
+      "bytes": 1027,
+      "sha256": "f596f8ace878138776b9597ccf924c495d9d856f0972fba87acfa4c18a48ede2"
     },
     {
       "path": "artifacts/data/scenario_summaries.csv",
-      "bytes": 695,
-      "sha256": "9e59554945ccd700c9ffc7bec097df74790a96400547dbf3e689c582bf2d1114"
+      "bytes": 681,
+      "sha256": "364dfde7f28b1ff6399100a4855b76d7eb5236456e7f78d00d6b91a37442e7fe"
     },
     {
       "path": "artifacts/data/score_contributions.csv",
@@ -208,8 +208,8 @@
     },
     {
       "path": "artifacts/figures/scenario_comparison.png",
-      "bytes": 94053,
-      "sha256": "2d7785668caab37bc86971567d538d95fd2fdca24138402ea428d032153f222c"
+      "bytes": 94023,
+      "sha256": "d6823f0544ecc787d1ef82e07561bd25f3fdcf6c8e8816abbf8aa5c2104b1af1"
     },
     {
       "path": "artifacts/figures/top_candidates.png",
@@ -233,8 +233,8 @@
     },
     {
       "path": "artifacts/maps/scenario_portfolios_map.html",
-      "bytes": 24445,
-      "sha256": "c65851d87f142f4c2c1f5f7581619ae114b305bba2266c0bc3a82c5c929987ed"
+      "bytes": 22935,
+      "sha256": "52f484a105ce39f7ce715d9ac8305e9937ae9356adb1970df880cb7ee2a2267a"
     },
     {
       "path": "artifacts/maps/white_space_h3_map.html",
@@ -264,7 +264,7 @@
     {
       "path": "artifacts/qa/artifact_verification.json",
       "bytes": 5627,
-      "sha256": "abf7cfa06850db6164e88328550da49766594bd456b4d7d1d9ecca1ea0fa6600"
+      "sha256": "28e43d51dfefa73ba1163afa93daf475fbcae038a16d3bf65bf0a0fc53009b2d"
     },
     {
       "path": "artifacts/qa/audited_requirements.txt",
@@ -323,8 +323,8 @@
     },
     {
       "path": "configs/base.yaml",
-      "bytes": 1326,
-      "sha256": "3619cef35e82543b312b35a3410d4e66fe6b9b76ad6ba2d537d94ea3adc6a1b3"
+      "bytes": 1440,
+      "sha256": "6ef240bb40727a32914eb6fddb928694953f6dcfb9d84555e1d8fcd4603fea02"
     },
     {
       "path": "data/README.md",
@@ -473,8 +473,8 @@
     },
     {
       "path": "docs/methodology.md",
-      "bytes": 6192,
-      "sha256": "c1118d3150b522bf889b05528cbffb24da75653373115788a7149e5b25ee767b"
+      "bytes": 6726,
+      "sha256": "682cf0bdfce859262c40a7bc4d0d5f74f156d21b691cfc197f1957580113e12d"
     },
     {
       "path": "docs/model_card.md",
@@ -828,13 +828,13 @@
     },
     {
       "path": "src/site_intelligence/optimization.py",
-      "bytes": 9669,
-      "sha256": "56e9a3f918f60421eca9130bef31c8e451d717dba6699ae01e141b789b181df0"
+      "bytes": 10539,
+      "sha256": "ba76bf1e330d1347cadd2f43d658bf548c941856fdb6aa60b91c6cac11f1d615"
     },
     {
       "path": "src/site_intelligence/pipeline.py",
-      "bytes": 13596,
-      "sha256": "a7fe1c378eed890c98b8efd0971b3e9090b7ff8b210d7e9edc4074a6dbd6a2c0"
+      "bytes": 13727,
+      "sha256": "b7fab931a538e9182b9f6d06d685df273fa4f4a305843bbbfd81a0f3710b25a8"
     },
     {
       "path": "src/site_intelligence/quality.py",
@@ -868,8 +868,8 @@
     },
     {
       "path": "tests/test_optimization_controls.py",
-      "bytes": 1063,
-      "sha256": "b7e388354f3394e0bed3110746cf13d252dbea4c79305cd47c20efe5c196d1a7"
+      "bytes": 3930,
+      "sha256": "2d6894f25c990a694434e6f0f3dc7cf128d2728625f2956dccf9f1016422a5d6"
     },
     {
       "path": "tests/test_pipeline_outputs.py",

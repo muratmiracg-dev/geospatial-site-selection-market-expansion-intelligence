@@ -23,8 +23,13 @@ def _validate_optimization_controls(
     scenarios: dict[str, dict[str, float]],
     minimum_distance_km: float,
     coverage_minutes: int,
+    minimum_portfolio_ebit_try_m: float = 0.0,
 ) -> None:
     """Validate decision controls before constructing an optimization model."""
+    if isinstance(minimum_portfolio_ebit_try_m, bool) or not np.isfinite(
+        minimum_portfolio_ebit_try_m
+    ):
+        raise ValueError("minimum_portfolio_ebit_try_m must be finite")
     if not scenarios:
         raise ValueError("scenarios must not be empty")
     if not np.isfinite(minimum_distance_km) or minimum_distance_km < 0:
@@ -61,10 +66,18 @@ def optimize_portfolios(
     *,
     minimum_distance_km: float,
     coverage_minutes: int,
+    minimum_portfolio_ebit_try_m: float = 0.0,
 ) -> OptimizationResult:
-    """Solve budgeted incremental population coverage with distance conflicts."""
+    """Solve budgeted incremental population coverage with distance conflicts.
 
-    _validate_optimization_controls(scenarios, minimum_distance_km, coverage_minutes)
+    The objective adds location score and covered population to expected EBIT, so on its
+    own it can trade money for coverage and recommend a portfolio that loses money in the
+    scenario it was built for. A floor on scenario portfolio EBIT (default 0) rules that out.
+    """
+
+    _validate_optimization_controls(
+        scenarios, minimum_distance_km, coverage_minutes, minimum_portfolio_ebit_try_m
+    )
 
     candidate_ids = candidates["candidate_id"].astype(str).tolist()
     grid_indexed = grid.set_index("h3_cell")
@@ -115,12 +128,14 @@ def optimize_portfolios(
         demand_multiplier = float(assumptions["demand_multiplier"])
         cost_multiplier = float(assumptions["cost_multiplier"])
         candidate_value = {}
+        candidate_ebit = {}
         for candidate_id in candidate_ids:
             row = indexed_candidates.loc[candidate_id]
             expected_ebit = (
                 float(row["predicted_sales_try_m"]) * demand_multiplier * 0.205
                 - float(row["annual_opex_try_m"]) * cost_multiplier
             )
+            candidate_ebit[candidate_id] = expected_ebit
             candidate_value[candidate_id] = (
                 expected_ebit
                 + float(row["location_score"]) * 0.09
@@ -140,6 +155,9 @@ def optimize_portfolios(
             for candidate_id in candidate_ids
         ) <= float(assumptions["budget_try_m"])
         problem += pulp.lpSum(select.values()) <= int(assumptions["max_stores"])
+        problem += pulp.lpSum(
+            candidate_ebit[candidate_id] * select[candidate_id] for candidate_id in candidate_ids
+        ) >= float(minimum_portfolio_ebit_try_m)
         for conflict in conflicts:
             problem += select[conflict["candidate_a"]] + select[conflict["candidate_b"]] <= 1
         for cell, candidate_list in covering_candidates.items():

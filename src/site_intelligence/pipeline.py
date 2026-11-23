@@ -203,6 +203,9 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict[str, Any]:
         config["optimization"]["scenarios"],
         minimum_distance_km=float(config["optimization"]["minimum_store_distance_km"]),
         coverage_minutes=int(config["optimization"]["coverage_threshold_minutes"]),
+        minimum_portfolio_ebit_try_m=float(
+            config["optimization"].get("minimum_portfolio_ebit_try_m", 0.0)
+        ),
     )
 
     grid = _add_grid_white_space(datasets["grid"], datasets["competitors"], existing_cache)

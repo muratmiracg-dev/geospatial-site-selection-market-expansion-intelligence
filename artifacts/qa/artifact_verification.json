@@ -117,7 +117,7 @@
     {
       "check": "scenario_selection_counts",
       "status": "PASS",
-      "details": "{'base': 4, 'optimistic': 6, 'pessimistic': 3}"
+      "details": "{'base': 4, 'optimistic': 6, 'pessimistic': 2}"
     },
     {
       "check": "data_quality_failures",
