@@ -107,6 +107,7 @@ The objective balances expected EBIT, location score and incremental population,
 a cannibalization penalty. Constraints include:
 
 - scenario budget;
+- non-negative scenario portfolio EBIT (`minimum_portfolio_ebit_try_m`, default 0);
 - maximum selected-store count;
 - minimum pairwise candidate distance;
 - candidate capacity/portfolio count;
@@ -122,9 +123,15 @@ silently produce a misleading portfolio.
 
 | Scenario | Sites | Budget used | Incremental population | Coverage | Sales | EBIT |
 |---|---:|---:|---:|---:|---:|---:|
-| Pessimistic | 3 | TRY 74.473m | 908,890 | 20.447% | TRY 466.551m | TRY -2.071m |
+| Pessimistic | 2 | TRY 48.689m | 512,494 | 17.922% | TRY 310.910m | TRY 0.094m |
 | Base | 4 | TRY 93.382m | 1,329,291 | 23.125% | TRY 732.554m | TRY 28.826m |
 | Optimistic | 6 | TRY 135.783m | 2,068,792 | 27.835% | TRY 1,256.350m | TRY 81.520m |
+
+Because the objective adds location score and covered population to expected EBIT, it can
+trade money for coverage. Without the EBIT floor the pessimistic scenario selected C24, C18
+and C05 for a portfolio expected EBIT of TRY -2.071m, i.e. it recommended a portfolio that
+loses money in the very scenario it was built for. With the floor it selects C18 and C05
+(TRY +0.094m) and leaves TRY 26.3m of budget unused; base and optimistic are unchanged.
 
 ## 10. Interpretation protocol
 

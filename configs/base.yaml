@@ -38,6 +38,8 @@ scoring:
 optimization:
   coverage_threshold_minutes: 10
   minimum_store_distance_km: 4.5
+  # A scenario portfolio may not lose money in its own scenario (TRY m/year).
+  minimum_portfolio_ebit_try_m: 0.0
   scenarios:
     optimistic:
       budget_try_m: 150
